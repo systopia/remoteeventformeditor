@@ -191,7 +191,10 @@ abstract class AbstractCustomFieldTypeLoader implements EditorFieldTypeLoaderInt
    * @phpstan-return array<string, scalar>
    */
   private static function swapOptions(array $options): array {
-    return array_combine(array_values($options), array_keys($options));
+    /** @phpstan-var array<string, scalar> $swappedOptions */
+    $swappedOptions = array_combine(array_values($options), array_keys($options));
+
+    return $swappedOptions;
   }
 
 }
