@@ -1,0 +1,29 @@
+<div id="field-{{field._id}}" class="field">
+  <div class="field-header">
+    <!--<i class=" handle bi-arrows-move"></i>-->
+    <i class="handle crm-i fa-arrows"></i>
+    <span class="field-toggle" ng-click="toggleDetails()">
+      <span class="field-type">{{type.label}}</span> {{field.label}}
+    </span>
+    <i class="remove-button crm-i fa-remove" ng-click="remove()"></i>
+  </div>
+  <div ng-show="showDetails">
+    <div class="field-body">
+      <div class="control form-group">
+        <label for="field-label-{{field._id}}">{{ ts('Label') }}</label>
+        <input id="field-label-{{field._id}}" class="form-control" type="text" ng-model="field.label" ng-required="true">
+      </div>
+      <div class="control form-group">
+        <label for="field-description-{{field._id}}">{{ ts('Description') }}</label>
+        <input id="field-description-{{field._id}}" class="form-control" type="text" ng-model="field.description">
+      </div>
+      <div class="control checkbox">
+        <label for="field-required-{{field._id}}">
+          <input id="field-required-{{field._id}}" type="checkbox" ng-true-value="true" ng-false-value="false" ng-model="field.required">
+          {{ ts('Required') }}
+        </label>
+      </div>
+      <tg-dynamic-directive ng-model="field" tg-dynamic-directive-view="getFieldView"/>
+    </div>
+  </div>
+</div>

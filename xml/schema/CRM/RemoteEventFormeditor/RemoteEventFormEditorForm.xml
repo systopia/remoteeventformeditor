@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+  <base>CRM/RemoteEventFormEditor</base>
+  <class>RemoteEventFormEditorForm</class>
+  <name>civicrm_remote_event_form_editor_form</name>
+  <comment>FIXME</comment>
+  <log>true</log>
+
+  <field>
+    <name>id</name>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>Unique RemoteEventFormEditorForm ID</comment>
+    <html>
+      <type>Number</type>
+    </html>
+  </field>
+  <primaryKey>
+    <name>id</name>
+    <autoincrement>true</autoincrement>
+  </primaryKey>
+
+  <field>
+    <name>name</name>
+    <type>varchar</type>
+    <length>255</length>
+    <required>true</required>
+    <unique>true</unique>
+    <comment>Name of the form</comment>
+  </field>
+
+  <field>
+    <name>fields</name>
+    <type>text</type>
+    <serialize>JSON</serialize>
+    <required>true</required>
+    <comment>Fields in the form</comment>
+  </field>
+
+</table>

@@ -1,0 +1,95 @@
+<div class="control form-group">
+  <label for="field-street-{{field._id}}">{{ ts('Street') }}</label>
+  <select id="field-street-{{field._id}}" class="form-control" ng-model="field.street" ng-required="true">
+    <option value="none">{{ ts('None') }}</option>
+    <option value="optional">{{ ts('Optional') }}</option>
+    <option value="required">{{ ts('Required') }}</option>
+  </select>
+  <span ng-show="field.street != 'none'">
+    <label for="field-label-street-{{field.id}}">{{ ts('Label') }}</label>
+    <input type="text" class="form-control" ng-model="field.labels.street" ng-required="field.street != 'none'">
+  </span>
+</div><div class="control form-group">
+  <label for="field-supplemental-address1-{{field._id}}">{{ ts('Supplemental Address 1') }}</label>
+  <select id="field-supplemental-address1-{{field._id}}" class="form-control" ng-model="field.supplementalAddress1" ng-required="true">
+    <option value="none">{{ ts('None') }}</option>
+    <option value="optional">{{ ts('Optional') }}</option>
+    <option value="required">{{ ts('Required') }}</option>
+  </select>
+  <span ng-show="field.supplementalAddress1 != 'none'">
+    <label for="field-label-supplementalAddress1-{{field.id}}">{{ ts('Label') }}</label>
+    <input type="text" class="form-control" ng-model="field.labels.supplementalAddress1" ng-required="field.supplementalAddress1 != 'none'">
+  </span>
+</div>
+<div class="control form-group">
+  <label for="field-supplemental-address2-{{field._id}}">{{ ts('Supplemental Address 2') }}</label>
+  <select id="field-supplemental-address2-{{field._id}}" class="form-control" ng-model="field.supplementalAddress2" ng-required="true">
+    <option value="none">{{ ts('None') }}</option>
+    <option value="optional">{{ ts('Optional') }}</option>
+    <option value="required">{{ ts('Required') }}</option>
+  </select>
+  <span ng-show="field.supplementalAddress2 != 'none'">
+    <label for="field-label-supplementalAddress2-{{field.id}}">{{ ts('Label') }}</label>
+    <input type="text" class="form-control" ng-model="field.labels.supplementalAddress2" ng-required="field.supplementalAddress2 != 'none'">
+  </span>
+</div>
+<div class="control form-group">
+  <label for="field-supplemental-address3-{{field._id}}">{{ ts('Supplemental Address 3') }}</label>
+  <select id="field-supplemental-address3-{{field._id}}" class="form-control" ng-model="field.supplementalAddress3" ng-required="true">
+    <option value="none">{{ ts('None') }}</option>
+    <option value="optional">{{ ts('Optional') }}</option>
+    <option value="required">{{ ts('Required') }}</option>
+  </select>
+  <span ng-show="field.supplementalAddress3 != 'none'">
+    <label for="field-label-supplementalAddress3-{{field.id}}">{{ ts('Label') }}</label>
+    <input type="text" class="form-control" ng-model="field.labels.supplementalAddress3" ng-required="field.supplementalAddress3 != 'none'">
+  </span>
+</div>
+<div class="control form-group">
+  <label for="field-city-{{field._id}}">{{ ts('City') }}</label>
+  <select id="field-city-{{field._id}}" class="form-control" ng-model="field.city" ng-required="true">
+    <option value="none">{{ ts('None') }}</option>
+    <option value="optional">{{ ts('Optional') }}</option>
+    <option value="required">{{ ts('Required') }}</option>
+  </select>
+  <span ng-show="field.city != 'none'">
+    <label for="field-label-city-{{field.id}}">{{ ts('Label') }}</label>
+    <input type="text" class="form-control" ng-model="field.labels.city" ng-required="field.city != 'none'">
+  </span>
+</div>
+<div class="control form-group">
+  <label for="field-postal-code-{{field._id}}">{{ ts('Postal Code') }}</label>
+  <select id="field-postal-code-{{field._id}}" class="form-control" ng-model="field.postalCode" ng-required="true">
+    <option value="none">{{ ts('None') }}</option>
+    <option value="optional">{{ ts('Optional') }}</option>
+    <option value="required">{{ ts('Required') }}</option>
+  </select>
+  <span ng-show="field.postalCode != 'none'">
+    <label for="field-label-postalCode-{{field.id}}">{{ ts('Label') }}</label>
+    <input type="text" class="form-control" ng-model="field.labels.postalCode" ng-required="field.postalCode != 'none'">
+  </span>
+</div>
+<div class="control form-group">
+  <label for="field-country-{{field._id}}">{{ ts('Country') }}</label>
+  <select id="field-country-{{field._id}}" class="form-control" ng-model="field.country" ng-required="true">
+    <option value="none">{{ ts('None') }}</option>
+    <option value="optional">{{ ts('Optional') }}</option>
+    <option value="required">{{ ts('Required') }}</option>
+  </select>
+  <span ng-show="field.country != 'none'">
+    <label for="field-label-country-{{field.id}}">{{ ts('Label') }}</label>
+    <input type="text" class="form-control" ng-model="field.labels.country" ng-required="field.country != 'none'">
+  </span>
+</div>
+<div ng-show="field.country != 'none'" class="control form-group">
+  <label for="field-state-province-{{field._id}}">{{ ts('State/Province') }}</label>
+  <select id="field-state-province-{{field._id}}" class="form-control" ng-model="field.stateProvince" ng-required="true">
+    <option value="none">{{ ts('None') }}</option>
+    <option value="optional">{{ ts('Optional') }}</option>
+    <option value="required">{{ ts('Required') }}</option>
+  </select>
+  <span ng-show="field.stateProvince != 'none'">
+    <label for="field-label-stateProvince-{{field.id}}">{{ ts('Label') }}</label>
+    <input type="text" class="form-control" ng-model="field.labels.stateProvince" ng-required="field.stateProvince != 'none'">
+  </span>
+</div>

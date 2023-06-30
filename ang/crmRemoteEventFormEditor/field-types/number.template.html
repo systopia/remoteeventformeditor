@@ -1,0 +1,21 @@
+<div class="control form-group">
+    <label for="field-target-{{ngModelItem._id}}">{{ ts('Target') }}</label>
+    <input id="field-target-{{ngModelItem._id}}" class="form-control" type="text" ng-model="ngModelItem.target" ng-required="true">
+</div>
+<div class="control form-group">
+  <label for="field-value-{{ngModelItem._id}}">{{ ts('Initial Value') }}</label>
+  <input id="field-value-{{ngModelItem._id}}" class="form-control" type="number" ng-model="ngModelItem.value">
+</div>
+<div class="control form-group">
+  <label for="field-validation-{{ngModelItem._id}}">{{ ts('Validation') }}</label>
+  <select id="field-validation-{{ngModelItem._id}}" class="form-control" ng-model="ngModelItem.validation" ng-required="true">
+    <option value="Integer">{{ ts('Integer') }}</option>
+    <option value="Positive">{{ ts('Positive Integer') }}</option>
+    <option value="Float">{{ ts('Float') }}</option>
+    <option value="regex">{{ ts('Regular Expression') }}</option>
+  </select>
+</div>
+<div class="control form-group" ng-if="ngModelItem.validation === 'regex'">
+  <label for="field-validation-regex-{{ngModelItem._id}}">{{ ts('Regular Expression') }}</label>
+  <input id="field-validation-regex-{{ngModelItem._id}}" class="form-control" type="text" ng-model="ngModelItem.validationRegex" ng-required="true">
+</div>

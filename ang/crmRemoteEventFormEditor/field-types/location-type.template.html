@@ -1,0 +1,18 @@
+<div class="control form-group">
+    <label for="field-target-{{ngModelItem._id}}">{{ ts('Target') }}</label>
+    <input id="field-target-{{ngModelItem._id}}" class="form-control" type="text" ng-model="ngModelItem.target" ng-required="true">
+</div>
+<div class="control checkbox">
+    <label for="field-hidden-{{ngModelItem._id}}">
+      <input id="field-hidden-{{ngModelItem._id}}" type="checkbox" ng-model="ngModelItem.hidden">
+      {{ ts('Hidden') }}
+    </label>
+</div>
+<div class="control form-group">
+  <select-allowed-options id="'field-allowed-options-' + ngModelItem._id" options="type.options" allowed="ngModelItem.allowedOptions"></select-allowed-options>
+</div>
+<div class="control form-group">
+  <label ng-if="!ngModelItem.hidden" for="field-value-{{id}}">{{ ts('Initial Value') }}</label>
+  <label ng-if="ngModelItem.hidden" for="field-value-{{id}}">{{ ts('Value') }}</label>
+  <select-initial-option id="'field-value-' + id" value="ngModelItem.value" options="type.options" allowed="ngModelItem.allowedOptions" required="ngModelItem.hidden"></select-initial-option>
+</div>

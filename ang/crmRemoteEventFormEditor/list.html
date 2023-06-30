@@ -1,0 +1,49 @@
+<div id="bootstrap-theme" class="remoteeventformeditor remoteeventformeditor-list">
+
+  <h1 crm-page-title>{{ ts('Event Form Editor (CiviRemote)') }}</h1>
+
+  <div class="btn-group pull-right">
+    <a class="btn btn-primary" href="#/remote-event/form-editor/new">{{ ts('New Event Form') }}</a>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>{{ ts('Name') }}</th>
+      <th>{{ ts('Identifier') }}</th>
+      <th ng-if="false"><!-- TODO: Enable once supported -->{{ ts('Active Usage') }}</th>
+      <th>{{ ts('Actions') }}</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    <tr ng-repeat="form in forms">
+
+      <td>{{ form.name }}</td>
+      <td>{{ form.identifier }}</td>
+      <td ng-if="false"><!-- TODO: Enable once supported -->{{ form.activeUsageCount }}</td>
+      <td>
+        <a href="#/remote-event/form-editor/{{ form.id }}">
+          <button>{{ ts('Edit') }}</button>
+        </a>
+        <button ng-click="remove(form)" ng-if="form.usageCount === 0">
+          {{ ts('Remove') }}
+        </button>
+      </td>
+
+    </tr>
+
+    <tr ng-if="forms.length === 0">
+      <td colspan="4">
+        <p class="messages status no-popup text-center">
+          {{:: ts('None Found')}}
+        </p>
+      </td>
+    </tr>
+
+    </tbody>
+
+  </table>
+
+</div>

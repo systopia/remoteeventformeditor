@@ -1,0 +1,35 @@
+<div id="bootstrap-theme" class="remoteeventformeditor remoteeventformeditor-edit">
+
+  <h1 crm-page-title>{{ ts('Event Form Editor (CiviRemote)') }}</h1>
+
+  <form ng-submit="save()">
+
+    <div class="container-fluid">
+
+      <div class="row crm-form-block">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="form-name">{{ ts('Name') }}</label>
+            <input id="form-name" class="form-control" type="text" ng-model="form.name" ng-required="true">
+          </div>
+        </div>
+      </div>
+
+      <p class="help">{{ ts('To add a field, drag one from one of the field type groups and drop it onto the form layout box.') }}</p>
+
+      <fe-editor fields="form.fields" class="row fields-row"></fe-editor>
+
+      <div class="row crm-form-block">
+        <div class="col-md-12 crm-submit-buttons">
+
+          <button class="btn btn-primary crm-button crm-form-submit default" type="submit">{{ ts('Save') }}</button>
+          <a href="#/remote-event/form-editor"><button class="btn btn-cancel crm-button crm-button-type-cancel">{{ ts('Cancel') }}</button></a>
+
+        </div>
+      </div>
+
+    </div>
+
+  </form>
+
+</div>

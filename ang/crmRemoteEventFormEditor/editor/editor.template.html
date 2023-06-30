@@ -1,0 +1,31 @@
+<div class="col-md-3 types-list-column">
+  <div class="panel panel-default">
+
+    <div class="types-list-head panel-heading">
+      <h2 class="panel-title">{{ ts('Field types') }}</h2>
+    </div>
+
+    <div class="panel-body">
+      <div class="types-list" ui-sortable="sortableOptions" ng-model="fieldTypeGroups">
+        <div ng-repeat="fieldTypeGroup in fieldTypeGroups track by $index">
+          <tg-dynamic-directive ng-model="fieldTypeGroup" tg-dynamic-directive-view="getView"/>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="col-md-9 editor-canvas-column" ng-if="fieldTypes">
+  <div class="panel panel-default">
+
+    <div class="panel-heading">
+      <h2 class="panel-title">{{ ts('Form Layout')  }}</h2>
+    </div>
+
+    <div class="panel-body">
+      <fe-editor-canvas sortable-options="sortableOptions" field-types="fieldTypes" fields="fields"/>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,13 @@
+includes:
+	- phpstan.neon.dist
+
+parameters:
+	scanDirectories:
+		- {VENDOR_DIR}/civicrm/civicrm-core/CRM/
+		- {EXT_DIR}/de.systopia.remoteevent/Civi/
+		- {EXT_DIR}/de.systopia.remoteevent/CRM/
+		- {EXT_DIR}/de.systopia.remotetools/CRM/
+	scanFiles:
+		- {VENDOR_DIR}/civicrm/civicrm-core/api/api.php
+	bootstrapFiles:
+		- {VENDOR_DIR}/autoload.php

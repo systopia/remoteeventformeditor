@@ -1,0 +1,10 @@
+<div ui-sortable="sortableOptions" class="field-container" ng-model="fields">
+  <div ng-repeat="field in fields track by $index">
+    <tg-dynamic-directive ng-model="field" tg-dynamic-directive-view="getView"/>
+  </div>
+</div>
+
+<details>
+  <summary>{{ ts('Current fields (debug output)') }}</summary>
+  <pre>{{fields | json}}</pre>
+</details>

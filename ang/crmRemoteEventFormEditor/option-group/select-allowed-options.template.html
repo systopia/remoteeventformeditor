@@ -1,0 +1,11 @@
+<div class="control form-group">
+  <label>{{ ts('Allowed Options') }}</label>
+  <div ng-repeat="(label, value) in options">
+    <div class="form-group checkbox">
+      <label for="{{id}}-{{value}}">
+        <input id="{{id}}-{{value}}" type="checkbox" ng-checked="allowed.includes(value)" ng-click="toggleAllowed(value)">
+        {{ label }}
+      </label>
+    </div>
+  </div>
+</div>

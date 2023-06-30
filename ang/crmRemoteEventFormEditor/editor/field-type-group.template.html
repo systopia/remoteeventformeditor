@@ -1,0 +1,9 @@
+<details class="type-group" ui-sortable="sortableOptions" ng-model="ngModelItem.types">
+
+  <summary class="type-group-label">{{ ngModelItem.label }}</summary>
+
+  <div class="type-group-types" ng-repeat="fieldType in ngModelItem.types track by $index">
+    <div class="handle type">{{fieldType.label}}</div>
+  </div>
+
+</details>

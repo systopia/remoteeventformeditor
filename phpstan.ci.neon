@@ -1,0 +1,18 @@
+includes:
+	- phpstan.neon.dist
+
+parameters:
+	scanDirectories:
+		- ci/vendor/civicrm/civicrm-core/CRM/
+		- de.systopia.remoteevent/Civi/
+		- de.systopia.remoteevent/CRM/
+		- de.systopia.remotetools/CRM/
+	scanFiles:
+		- ci/vendor/civicrm/civicrm-core/api/api.php
+	bootstrapFiles:
+		- ci/vendor/autoload.php
+	# Because we test with different versions in CI we have unmatched errors
+	reportUnmatchedIgnoredErrors: false
+	ignoreErrors:
+		# Errors we get when using "prefer-lowest"
+		- '#::getSubscribedEvents\(\) return type has no value type specified in iterable type array.$#'

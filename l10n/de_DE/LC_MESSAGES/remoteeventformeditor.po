@@ -1,0 +1,331 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeGroupLoader.php
+msgid "Contact"
+msgstr "Kontakt"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+msgid "First Name"
+msgstr "Vorname"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+msgid "Middle Name"
+msgstr "Zweiter Vorname"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+msgid "Last Name"
+msgstr "Nachname"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+msgid "Gender"
+msgstr "Geschlecht"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+msgid "Birth Date"
+msgstr "Geburstdatum"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+msgid "Location type"
+msgstr "Adresskategorie"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+msgid "Address"
+msgstr "Adresse"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+msgid "Street Address"
+msgstr "Straße"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+#: ang/crmRemoteEventFormEditor/field-types/address.template.html
+msgid "City"
+msgstr "Ort"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+#: ang/crmRemoteEventFormEditor/field-types/address.template.html
+msgid "Postal Code"
+msgstr "Postleitzahl"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+msgid "County"
+msgstr "Bezirk/Landkreis"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+#: ang/crmRemoteEventFormEditor/field-types/address.template.html
+msgid "State/Province"
+msgstr "Bundesland"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+#: ang/crmRemoteEventFormEditor/field-types/address.template.html
+msgid "Country"
+msgstr "Land"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+#: ang/crmRemoteEventFormEditor/field-types/address.template.html
+msgid "Supplemental Address 1"
+msgstr "Adresszusatz 1"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+#: ang/crmRemoteEventFormEditor/field-types/address.template.html
+msgid "Supplemental Address 2"
+msgstr "Adresszusatz 2"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+#: ang/crmRemoteEventFormEditor/field-types/address.template.html
+msgid "Supplemental Address 3"
+msgstr "Adresszusatz 3"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+#: ang/crmRemoteEventFormEditor/field-types/text.template.html
+msgid "Email"
+msgstr "E-Mail"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+msgid "Phone"
+msgstr "Telefon"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+msgid "Prefix"
+msgstr "Präfix"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+msgid "Suffix"
+msgstr "Suffix"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+msgid "Title"
+msgstr "Titel"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/GenericFieldTypeGroupLoader.php
+msgid "Generic"
+msgstr "Allgemein"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/GenericFieldTypeLoader.php
+msgid "Group"
+msgstr "Gruppe"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/GenericFieldTypeLoader.php
+msgid "Text"
+msgstr "Text"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/GenericFieldTypeLoader.php
+msgid "Number"
+msgstr "Zahl"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/GenericFieldTypeLoader.php
+msgid "Date"
+msgstr "Datum"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/GenericFieldTypeLoader.php
+msgid "Checkbox"
+msgstr "Checkbox"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ParticipantFieldTypeGroupLoader.php
+msgid "Participant"
+msgstr "Teilnehmer"
+
+#: ang/crmRemoteEventFormEditor/edit.controller.js
+#: ang/crmRemoteEventFormEditor/editor/editor.directive.js
+#: ang/crmRemoteEventFormEditor/editor-canvas/editor-canvas.directive.js
+#: ang/crmRemoteEventFormEditor/field/field.directive.js
+#: ang/crmRemoteEventFormEditor/list.controller.js
+#: ang/crmRemoteEventFormEditor/option-group/select-allowed-options.directive.js
+#: ang/crmRemoteEventFormEditor/option-group/select-initial-option.directive.js
+msgid "remoteeventformeditor"
+msgstr ""
+
+#: ang/crmRemoteEventFormEditor/edit.html
+#: ang/crmRemoteEventFormEditor/list.html
+#: managed/NavigationRemoteEventFormEditor.mgd.php
+msgid "Event Form Editor (CiviRemote)"
+msgstr "Veranstaltungsformulareditor (CiviRemote)"
+
+#: ang/crmRemoteEventFormEditor/edit.html
+#: ang/crmRemoteEventFormEditor/list.html
+msgid "Name"
+msgstr "Name"
+
+#: ang/crmRemoteEventFormEditor/edit.html
+msgid ""
+"To add a field, drag one from one of the field type groups and drop it onto "
+"the form layout box."
+msgstr ""
+"Um ein Feld hinzuzufügen, ziehen Sie eines aus den Feldtypgruppen auf das "
+"Formularlayout und lassen es dort los."
+
+#: ang/crmRemoteEventFormEditor/edit.html
+msgid "Save"
+msgstr "Speichern"
+
+#: ang/crmRemoteEventFormEditor/edit.html
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: ang/crmRemoteEventFormEditor/editor/editor.template.html
+msgid "Field types"
+msgstr "Feldtypen"
+
+#: ang/crmRemoteEventFormEditor/editor/editor.template.html
+msgid "Form Layout"
+msgstr "Formularlayout"
+
+#: ang/crmRemoteEventFormEditor/editor-canvas/editor-canvas.template.html
+msgid "Current fields (debug output)"
+msgstr "Aktuelle Felder (Debugausgabe)"
+
+#: ang/crmRemoteEventFormEditor/field/field.template.html
+#: ang/crmRemoteEventFormEditor/field-types/address.template.html
+msgid "Label"
+msgstr "Beschriftung"
+
+#: ang/crmRemoteEventFormEditor/field/field.template.html
+msgid "Description"
+msgstr "Beschreibung"
+
+#: ang/crmRemoteEventFormEditor/field/field.template.html
+#: ang/crmRemoteEventFormEditor/field-types/address.template.html
+msgid "Required"
+msgstr "Erforderlich"
+
+#: ang/crmRemoteEventFormEditor/field-types/address.template.html
+msgid "Street"
+msgstr "Straße"
+
+#: ang/crmRemoteEventFormEditor/field-types/address.template.html
+#: ang/crmRemoteEventFormEditor/field-types/text.template.html
+msgid "None"
+msgstr "Kein"
+
+#: ang/crmRemoteEventFormEditor/field-types/address.template.html
+msgid "Optional"
+msgstr "Optional"
+
+#: ang/crmRemoteEventFormEditor/field-types/checkbox.template.html
+#: ang/crmRemoteEventFormEditor/field-types/date.template.html
+#: ang/crmRemoteEventFormEditor/field-types/location-type.template.html
+#: ang/crmRemoteEventFormEditor/field-types/multi-select.template.html
+#: ang/crmRemoteEventFormEditor/field-types/number.template.html
+#: ang/crmRemoteEventFormEditor/field-types/select.template.html
+#: ang/crmRemoteEventFormEditor/field-types/text.template.html
+msgid "Target"
+msgstr "Ziel"
+
+#: ang/crmRemoteEventFormEditor/field-types/checkbox.template.html
+msgid "Initially Set"
+msgstr "Initial gesetzt"
+
+#: ang/crmRemoteEventFormEditor/field-types/date.template.html
+#: ang/crmRemoteEventFormEditor/field-types/location-type.template.html
+#: ang/crmRemoteEventFormEditor/field-types/multi-select.template.html
+#: ang/crmRemoteEventFormEditor/field-types/number.template.html
+#: ang/crmRemoteEventFormEditor/field-types/option-group.template.html
+#: ang/crmRemoteEventFormEditor/field-types/select.template.html
+#: ang/crmRemoteEventFormEditor/field-types/text.template.html
+msgid "Initial Value"
+msgstr "Initialer Wert"
+
+#: ang/crmRemoteEventFormEditor/field-types/location-type.template.html
+msgid "Hidden"
+msgstr "Versteckt"
+
+#: ang/crmRemoteEventFormEditor/field-types/location-type.template.html
+msgid "Value"
+msgstr "Wert"
+
+#: ang/crmRemoteEventFormEditor/field-types/multi-select.template.html
+#: ang/crmRemoteEventFormEditor/field-types/select.template.html
+msgid "Options"
+msgstr "Optionen"
+
+#: ang/crmRemoteEventFormEditor/field-types/number.template.html
+#: ang/crmRemoteEventFormEditor/field-types/text.template.html
+msgid "Validation"
+msgstr "Validierung"
+
+#: ang/crmRemoteEventFormEditor/field-types/number.template.html
+msgid "Integer"
+msgstr "Ganzzahl"
+
+#: ang/crmRemoteEventFormEditor/field-types/number.template.html
+msgid "Positive Integer"
+msgstr "Positive Ganzzahl"
+
+#: ang/crmRemoteEventFormEditor/field-types/number.template.html
+msgid "Float"
+msgstr "Dezimalzahl"
+
+#: ang/crmRemoteEventFormEditor/field-types/number.template.html
+#: ang/crmRemoteEventFormEditor/field-types/text.template.html
+msgid "Regular Expression"
+msgstr "Regulärer Ausdruck"
+
+#: ang/crmRemoteEventFormEditor/field-types/text.template.html
+msgid "Maximum Length"
+msgstr "Maximale Länge"
+
+#: ang/crmRemoteEventFormEditor/field-types/text.template.html
+msgid "Multiple Lines"
+msgstr "Mehrzeilig"
+
+#: ang/crmRemoteEventFormEditor/field-types/text.template.html
+msgid "URL"
+msgstr "URL"
+
+#: ang/crmRemoteEventFormEditor/field-types/text.template.html
+msgid "Alphanumeric"
+msgstr "Alphanumerisch"
+
+#: ang/crmRemoteEventFormEditor/field-types/text.template.html
+msgid "Comma Separated Integers"
+msgstr "Komma-getrennte Ganzzahlen"
+
+#: ang/crmRemoteEventFormEditor/list.controller.js
+msgid ""
+"Do you really want to delete form \"%name\"? It must not be used in any "
+"event."
+msgstr ""
+"Möchten Sie Formular \"%name\" wirklich löschen? Es darf in keiner "
+"Veranstaltung verwendet werden."
+
+#: ang/crmRemoteEventFormEditor/list.html
+msgid "New Event Form"
+msgstr "Neues Veranstaltungsformular"
+
+#: ang/crmRemoteEventFormEditor/list.html
+msgid "Identifier"
+msgstr "Kennung"
+
+#: ang/crmRemoteEventFormEditor/list.html
+msgid "Active Usage"
+msgstr "Aktive Verwendung"
+
+#: ang/crmRemoteEventFormEditor/list.html
+msgid "Actions"
+msgstr "Aktionen"
+
+#: ang/crmRemoteEventFormEditor/list.html
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: ang/crmRemoteEventFormEditor/list.html
+msgid "Remove"
+msgstr "Löschen"
+
+#: ang/crmRemoteEventFormEditor/list.html
+msgid "None Found"
+msgstr "Keins gefunden"
+
+#: ang/crmRemoteEventFormEditor/option-group/select-allowed-options.template.html
+msgid "Allowed Options"
+msgstr "Erlaubte Optionen"

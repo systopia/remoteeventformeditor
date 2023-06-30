@@ -1,0 +1,8 @@
+<div class="control form-group">
+    <label for="field-target-{{ngModelItem._id}}">{{ ts('Target') }}</label>
+    <input id="field-target-{{ngModelItem._id}}" class="form-control" type="text" ng-model="ngModelItem.target" ng-required="true">
+</div>
+<div class="control form-group">
+  <label for="field-value-{{ngModelItem._id}}">{{ ts('Initial Value') }}</label>
+  <input id="field-value-{{ngModelItem._id}}" class="form-control" type="text" ng-model="ngModelItem.value">
+</div>

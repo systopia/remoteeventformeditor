@@ -1,0 +1,47 @@
+{
+  "_from": "tg-dynamic-directive",
+  "_id": "tg-dynamic-directive@0.4.0",
+  "_inBundle": false,
+  "_integrity": "sha512-sDjSC071aqsBPK8tLilK1/zr2/J4RHFG6TG1GTKONAH07tQSbEDPzI7qfr0G9dnlHT88GZxbM2sKCksm3EYFKQ==",
+  "_location": "/tg-dynamic-directive",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "tg-dynamic-directive",
+    "name": "tg-dynamic-directive",
+    "escapedName": "tg-dynamic-directive",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/tg-dynamic-directive/-/tg-dynamic-directive-0.4.0.tgz",
+  "_shasum": "3f2dc507ca68d6a771bb610c1f33e325addea314",
+  "_spec": "tg-dynamic-directive",
+  "_where": "/home/dominic/repositories/remote-event-form-editor",
+  "author": {
+    "name": "https://github.com/thgreasi/tg-dynamic-directive/graphs/contributors"
+  },
+  "bugs": {
+    "url": "https://github.com/thgreasi/tg-dynamic-directive/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "A simple directive to dynamically load proper view, based on the characteristics of the provided model.",
+  "devDependencies": {},
+  "homepage": "https://github.com/thgreasi/tg-dynamic-directive",
+  "license": "MIT",
+  "main": "./src/tg.dynamic.directive.js",
+  "name": "tg-dynamic-directive",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thgreasi/tg-dynamic-directive.git"
+  },
+  "scripts": {},
+  "version": "0.4.0"
+}

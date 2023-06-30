@@ -1,0 +1,111 @@
+/* Add any CSS rules for Angular module "crmRemoteEventFormEditor" */
+
+.handle {
+  cursor: move;
+}
+
+.fields-row {
+  display: block;
+  position: relative;
+}
+
+#bootstrap-theme .editor-canvas-column {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.type {
+  border-color: #000;
+  border-width: 1px;
+  border-style: dashed;
+  padding: 2px;
+  margin: 5px;
+}
+
+.field-container {
+  padding: 10px;
+  border: 1px dotted #000;
+}
+
+#bootstrap-theme summary {
+  display: list-item;
+  cursor: pointer;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#bootstrap-theme .panel {
+  padding: 0;
+}
+
+.fieldset {
+  border-color: #000;
+  border-width: 1px;
+  border-style: solid;
+  display: block;
+  padding: 10px;
+  margin-bottom: 1em;
+}
+
+.fieldset-header {
+  margin-bottom: 1em;
+}
+
+#bootstrap-theme .fieldset-header .form-control {
+  display: inline-block;
+  width: auto;
+}
+
+.fieldset-fields {
+  padding-left: 15px;
+}
+
+.field {
+  border-color: #000;
+  border-width: 1px;
+  border-style: dotted;
+  margin-bottom: 1em;
+}
+
+.field-header {
+  display: flex;
+  padding: 0 1em;
+  background: lightgrey;
+}
+
+.field-header > * {
+  padding: .5em 0;
+}
+
+.field-toggle {
+  flex-grow: 1;
+  cursor: pointer;
+  padding: .5em;
+}
+
+.field-type {
+  font-style: italic;
+}
+
+.field-type::before {
+  content: "[";
+}
+
+.field-type::after {
+  content: "]";
+}
+
+.remove-button {
+  cursor: pointer;
+  vertical-align: middle;
+  float: right;
+}
+
+.field-body {
+  padding: 1em;
+}
+
+.field-body .control {
+  margin: .5em 0;
+}

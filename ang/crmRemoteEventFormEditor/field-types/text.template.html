@@ -1,0 +1,33 @@
+<div class="control form-group">
+    <label for="field-target-{{ngModelItem._id}}">{{ ts('Target') }}</label>
+    <input id="field-target-{{ngModelItem._id}}" class="form-control" type="text" ng-model="ngModelItem.target" ng-required="true">
+</div>
+<div class="control form-group">
+    <label for="field-maxlength-{{ngModelItem._id}}">{{ ts('Maximum Length') }}</label>
+    <input id="field-maxlength-{{ngModelItem._id}}" class="form-control" type="text" ng-model="ngModelItem.maxLength">
+</div>
+<div class="control checkbox">
+  <label for="field-multiLine-{{ngModelItem._id}}">
+    <input id="field-multiLine-{{ngModelItem._id}}" type="checkbox" ng-model="ngModelItem.multiLine" ng-true-value="true" ng-false-value="false">
+    {{ ts('Multiple Lines') }}
+  </label>
+</div>
+<div class="control form-group">
+  <label for="field-value-{{ngModelItem._id}}">{{ ts('Initial Value') }}</label>
+  <input id="field-value-{{ngModelItem._id}}" class="form-control" type="text" ng-model="ngModelItem.value">
+</div>
+<div class="control form-group">
+  <label for="field-validation-{{ngModelItem._id}}">{{ ts('Validation') }}</label>
+  <select id="field-validation-{{ngModelItem._id}}" class="form-control" ng-model="ngModelItem.validation" ng-required="true">
+    <option value="Text">{{ ts('None') }}</option>
+    <option value="Email">{{ ts('Email') }}</option>
+    <option value="Link">{{ ts('URL') }}</option>
+    <option value="Alphanumeric">{{ ts('Alphanumeric') }}</option>
+    <option value="CommaSeparatedIntegers">{{ ts('Comma Separated Integers') }}</option>
+    <option value="regex">{{ ts('Regular Expression') }}</option>
+  </select>
+</div>
+<div class="control form-group" ng-if="ngModelItem.validation === 'regex'">
+  <label for="field-validation-regex-{{ngModelItem._id}}">{{ ts('Regular Expression') }}</label>
+  <input id="field-validation-regex-{{ngModelItem._id}}" class="form-control" type="text" ng-model="ngModelItem.validationRegex" ng-required="true">
+</div>

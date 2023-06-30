@@ -1,0 +1,14 @@
+<div id="fieldset-{{ngModelItem._id}}" class="field-container fieldset" ui-sortable="sortableOptions" ng-model="ngModelItem.items">
+  <div class="fieldset-header">
+    <i class="handle crm-i fa-arrows"></i>
+    <span class="form-group">
+      <span class="field-type">{{fieldTypes[ngModelItem.type].label}}</span>
+      <label for="fieldset-label-{{ngModelItem._id}}">Label</label>
+      <input id="fieldset-label-{{ngModelItem._id}}" class="form-control" type="text" ng-model="ngModelItem.label" required>
+    </span>
+    <i class="remove-button crm-i fa-remove" ng-click="removeItem(ngModelItem._id)"></i>
+  </div>
+  <div class="fieldset-fields" ng-repeat="field in ngModelItem.items track by $index">
+    <tg-dynamic-directive ng-model="field" tg-dynamic-directive-view="getView"/>
+  </div>
+</div>

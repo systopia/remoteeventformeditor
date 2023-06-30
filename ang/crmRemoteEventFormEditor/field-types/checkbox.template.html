@@ -1,0 +1,10 @@
+<div class="control form-group">
+    <label for="field-target-{{ngModelItem._id}}">{{ ts('Target') }}</label>
+    <input id="field-target-{{ngModelItem._id}}" class="form-control" type="text" ng-model="ngModelItem.target" ng-required="true">
+</div>
+<div class="control checkbox">
+  <label for="field-value-{{ngModelItem._id}}">
+    <input id="field-value-{{ngModelItem._id}}" type="checkbox" ng-true-value="true" ng-false-value="false" ng-model="ngModelItem.value">
+    {{ ts('Initially Set') }}
+  </label>
+</div>

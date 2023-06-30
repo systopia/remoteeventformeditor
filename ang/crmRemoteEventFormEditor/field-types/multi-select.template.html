@@ -1,0 +1,12 @@
+<div class="control form-group">
+    <label for="field-target-{{ngModelItem._id}}">{{ ts('Target') }}</label>
+    <input id="field-target-{{ngModelItem._id}}" class="form-control" type="text" ng-model="ngModelItem.target" ng-required="true">
+</div>
+<div class="control form-group">
+    <label for="field-options-{{ngModelItem._id}}">{{ ts('Options') }}</label> (one line per option in the form "value=label")
+    <textarea id="field-options-{{ngModelItem._id}}" class="form-control" ng-model="ngModelItem.options" ng-required="true" ng-pattern="/^[^=\n]*=[^\n]+(\n[^=\n]*=[^\n]+)*\n?$/"/>
+</div>
+<div class="control form-group">
+  <label for="field-value-{{ngModelItem._id}}">{{ ts('Initial Value') }}</label>
+  <input id="field-value-{{ngModelItem._id}}" class="form-control" type="text" ng-model="ngModelItem.value">
+</div>
