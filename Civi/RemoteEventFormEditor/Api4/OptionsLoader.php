@@ -38,10 +38,13 @@ final class OptionsLoader implements OptionsLoaderInterface {
       ],
     ]);
 
-    /** @var array<scalar|null, string> $options */
+    /** @phpstan-var array<scalar|null, string> $options */
     $options = $result->first()['options'] ?? [];
 
-    return array_combine(array_values($options), array_keys($options));
+    /** @phpstan-var array<string, scalar|null> $swappedOptions */
+    $swappedOptions = array_combine(array_values($options), array_keys($options));
+
+    return $swappedOptions;
   }
 
 }
