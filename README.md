@@ -4,6 +4,11 @@ This extension allows to build event registration forms with an editor. Those
 forms can be used in the
 [Remote Events](https://github.com/systopia/de.systopia.remoteevent) extension.
 
+![Screenshot](images/screenshot.png)
+
+Common fields of contacts as well as custom fields of contacts and participants
+are available.
+
 This extension is licensed under [AGPL-3.0](LICENSE.txt).
 
 ## Requirements
@@ -35,4 +40,3 @@ install it with the command-line tool [cv](https://github.com/civicrm/cv).
 git clone https://github.com/systopia/remoteeventformeditor.git
 cv en remoteeventformeditor
 ```
-
