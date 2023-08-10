@@ -49,6 +49,7 @@ function _remoteeventformeditor_composer_autoload(): void {
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_config/
  */
 function remoteeventformeditor_civicrm_config(&$config) {
+  _remoteeventformeditor_composer_autoload();
   _remoteeventformeditor_civix_civicrm_config($config);
 }
 
