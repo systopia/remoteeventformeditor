@@ -32,6 +32,17 @@ use Symfony\Component\DependencyInjection\Argument\TaggedIteratorArgument;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
 
+function _remoteeventformeditor_composer_autoload(): void {
+  if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+    $classLoader = require_once __DIR__ . '/vendor/autoload.php';
+    if ($classLoader instanceof \Composer\Autoload\ClassLoader) {
+      // Re-register class loader to append it. (It's automatically prepended.)
+      $classLoader->unregister();
+      $classLoader->register();
+    }
+  }
+}
+
 /**
  * Implements hook_civicrm_config().
  *
@@ -42,6 +53,8 @@ function remoteeventformeditor_civicrm_config(&$config) {
 }
 
 function remoteeventformeditor_civicrm_container(ContainerBuilder $container): void {
+  _remoteeventformeditor_composer_autoload();
+
   // Rebuild container if this file changes.
   $container->addResource(new FileResource(__FILE__));
 

@@ -13,13 +13,16 @@ This extension is licensed under [AGPL-3.0](LICENSE.txt).
 
 ## Requirements
 
-* PHP v7.4+
+* PHP 7.4 or PHP 8
 * CiviCRM 5.48+
 * Requirements specified in `composer.json`
+  * webmozart/assert
+  * symfony/polyfill-php80 (if PHP 7.4 is used.)
 
-## Installation (Web UI)
-
-Learn more about installing CiviCRM extensions in the [CiviCRM Sysadmin Guide](https://docs.civicrm.org/sysadmin/en/latest/customize/extensions/).
+If the requirements specified in `composer.json` are not available, use
+`composer` to install them. If CviCRM is set up via composer, you may want to
+use `composer require`. Alternatively you can just run `composer install` in
+the extension's directory.
 
 ## Installation (CLI, Zip)
 
