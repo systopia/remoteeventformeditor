@@ -24,6 +24,7 @@ use Civi\RemoteEventFormEditor\FieldType\EditorFieldType;
 use Civi\RemoteEventFormEditor\OptionsLoaderInterface;
 use Civi\RemoteEventFormEditor\RegistrationProfile\Form\ConcreteProfileFormFieldFactoryInterface;
 use Civi\RemoteEventFormEditor\RegistrationProfile\Form\ProfileFormFieldFactory;
+use Civi\RemoteEventFormEditor\RegistrationProfile\Form\Util\FormFieldNameUtil;
 use Civi\RemoteEventFormEditor\Util\ArrayUtil;
 use Webmozart\Assert\Assert;
 
@@ -99,8 +100,8 @@ final class AddressFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
     $labels = $editorField['labels'];
 
     return [
-      'Contact:street_address' => [
-        'name' => 'Contact:street_address',
+      FormFieldNameUtil::toProfileFormFieldName('Contact:street_address') => [
+        'name' => FormFieldNameUtil::toProfileFormFieldName('Contact:street_address'),
         'type' => 'Text',
         'weight' => $weight++,
         'required' => $editorField['street'] === 'required' ? 1 : 0,
@@ -124,7 +125,7 @@ final class AddressFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
 
     for ($i = 1; $i <= 3; ++$i) {
       $editorFieldName = 'supplementalAddress' . $i;
-      $fieldName = 'Contact:supplemental_address_' . $i;
+      $fieldName = FormFieldNameUtil::toProfileFormFieldName('Contact:supplemental_address_') . $i;
       if ('none' !== ($editorField[$editorFieldName] ?? 'none')) {
         $fields[$fieldName] = [
           'name' => $fieldName,
@@ -155,8 +156,8 @@ final class AddressFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
     $labels = $editorField['labels'];
 
     return [
-      'Contact:city' => [
-        'name' => 'Contact:city',
+      FormFieldNameUtil::toProfileFormFieldName('Contact:city') => [
+        'name' => FormFieldNameUtil::toProfileFormFieldName('Contact:city'),
         'type' => 'Text',
         'weight' => $weight++,
         'required' => $editorField['city'] === 'required' ? 1 : 0,
@@ -180,8 +181,8 @@ final class AddressFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
     /** @phpstan-var array<string, string> $labels */
     $labels = $editorField['labels'];
     return [
-      'Contact:postal_code' => [
-        'name' => 'Contact:postal_code',
+      FormFieldNameUtil::toProfileFormFieldName('Contact:postal_code') => [
+        'name' => FormFieldNameUtil::toProfileFormFieldName('Contact:postal_code'),
         'type' => 'Text',
         'weight' => $weight++,
         'required' => $editorField['postalCode'] === 'required' ? 1 : 0,
@@ -208,8 +209,8 @@ final class AddressFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
     /** @phpstan-var array<string, int> $countryIds */
     $countryIds = $this->optionsLoader->getOptions('Address', 'country_id');
     $fields = [
-      'Contact:country_id' => [
-        'name' => 'Contact:country_id',
+      FormFieldNameUtil::toProfileFormFieldName('Contact:country_id') => [
+        'name' => FormFieldNameUtil::toProfileFormFieldName('Contact:country_id'),
         'type' => 'Select',
         'options' => ArrayUtil::flip($countryIds),
         'weight' => $weight++,
@@ -221,9 +222,9 @@ final class AddressFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
 
     if ('none' !== ($editorField['stateProvince'] ?? 'none')) {
       // ":" in 'dependent_field' is not possible, so we have to use "-" instead.
-      $fields['Contact:country_id']['dependencies'] = [
+      $fields[FormFieldNameUtil::toProfileFormFieldName('Contact:country_id')]['dependencies'] = [
         [
-          'dependent_field' => 'Contact-state_province_id',
+          'dependent_field' => FormFieldNameUtil::toProfileFormFieldName('Contact:state_province_id'),
           'hide_unrestricted' => 1,
           'hide_restricted_empty' => 1,
           'command' => 'restrict',
@@ -232,8 +233,8 @@ final class AddressFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
         ],
       ];
 
-      $fields['Contact-state_province_id'] = [
-        'name' => 'Contact-state_province_id',
+      $fields[FormFieldNameUtil::toProfileFormFieldName('Contact:state_province_id')] = [
+        'name' => FormFieldNameUtil::toProfileFormFieldName('Contact:state_province_id'),
         'type' => 'Select',
         'weight' => $weight++,
         'required' => $editorField['stateProvince'] === 'required' ? 1 : 0,

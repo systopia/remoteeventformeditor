@@ -28,8 +28,15 @@ final class FormFieldNameUtil {
    * @see fromProfileFormFieldName()
    */
   public static function toProfileFormFieldName(string $fieldName): string {
-    // Field names with dots do not work.
-    return str_replace('.', '::', $fieldName);
+    // Field names for dependent fields must be allowed as ID in CSS selectors:
+    // [a-zA-Z0-9] and ISO 10646 characters U+00A0 and higher, plus the hyphen (-) and the underscore (_)
+    // https://www.w3.org/TR/CSS21/syndata.html#characters
+    //
+    // Dots in form field names are replaced by underscore in PHP.
+    // https://www.php.net/manual/en/language.variables.external.php
+    //
+    // ":" is the entity separator. "." is the custom group separator.
+    return str_replace([':', '.'], ['§', '-'], $fieldName);
   }
 
   /**
@@ -38,7 +45,7 @@ final class FormFieldNameUtil {
    * @see toProfileFormFieldName()
    */
   public static function fromProfileFormFieldName(string $fieldName): string {
-    return str_replace('::', '.', $fieldName);
+    return str_replace(['§', '-'], [':', '.'], $fieldName);
   }
 
 }

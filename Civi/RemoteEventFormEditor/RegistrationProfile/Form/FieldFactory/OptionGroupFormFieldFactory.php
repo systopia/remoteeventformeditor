@@ -23,6 +23,7 @@ use Civi\RemoteEventFormEditor\FieldType\EditorFieldType;
 use Civi\RemoteEventFormEditor\FieldType\Type\OptionGroupType;
 use Civi\RemoteEventFormEditor\RegistrationProfile\Form\ConcreteProfileFormFieldFactoryInterface;
 use Civi\RemoteEventFormEditor\RegistrationProfile\Form\ProfileFormFieldFactory;
+use Civi\RemoteEventFormEditor\RegistrationProfile\Form\Util\DependentFieldNameUtil;
 use Civi\RemoteEventFormEditor\RegistrationProfile\Form\Util\FormFieldNameUtil;
 use Civi\RemoteEventFormEditor\Util\ArrayUtil;
 use Webmozart\Assert\Assert;
@@ -62,6 +63,9 @@ final class OptionGroupFormFieldFactory implements ConcreteProfileFormFieldFacto
         'description' => $editorField['description'] ?? NULL,
         'value' => $editorField['value'] ?? NULL,
         'parent' => $parent,
+        'dependencies' => is_array($editorField['dependencies'] ?? NULL)
+        ? DependentFieldNameUtil::toProfileFormFieldNames($editorField['dependencies'])
+        : [],
       ],
     ];
   }

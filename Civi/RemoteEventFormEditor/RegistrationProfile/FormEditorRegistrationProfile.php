@@ -118,25 +118,20 @@ final class FormEditorRegistrationProfile extends CRM_Remoteevent_RegistrationPr
     // phpcs:enable
     foreach ($contactData as $fieldName => $value) {
       $newFieldName = FormFieldNameUtil::fromProfileFormFieldName($fieldName);
-      if ('Contact-state_province_id' === $newFieldName) {
+      unset($contactData[$fieldName]);
+
+      if ('Contact:state_province_id' === $newFieldName) {
         // value contains "{country_id}-{state_province_id}"
         if (is_string($value) && str_contains($value, '-')) {
           $value = explode('-', $value, 2)[1];
         }
         $contactData['state_province_id'] = $value;
-        unset($contactData[$fieldName]);
       }
-      // If "Contact-" field is used as "dependent_field".
-      if (str_starts_with($newFieldName, 'Contact:') || str_starts_with($newFieldName, 'Contact-')) {
+      elseif (str_starts_with($newFieldName, 'Contact:')) {
         $contactData[substr($newFieldName, 8)] = $value;
-        unset($contactData[$fieldName]);
       }
-      elseif (str_starts_with($fieldName, 'Participant:')) {
-        unset($contactData[$fieldName]);
-      }
-      elseif ($newFieldName !== $fieldName) {
+      elseif (!str_starts_with($fieldName, 'Participant:')) {
         $contactData[$newFieldName] = $value;
-        unset($contactData[$fieldName]);
       }
     }
 

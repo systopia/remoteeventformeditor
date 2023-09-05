@@ -43,17 +43,14 @@ final class UpdateParticipantDataSubscriber implements EventSubscriberInterface 
     $participantData = $event->get_participant_data();
     foreach ($participantData as $fieldName => $value) {
       $newFieldName = FormFieldNameUtil::fromProfileFormFieldName($fieldName);
-      // If "Contact-" field is used as "dependent_field".
-      if (str_starts_with($newFieldName, 'Contact:') || str_starts_with($newFieldName, 'Contact-')) {
-        unset($participantData[$fieldName]);
-      }
-      elseif (str_starts_with($newFieldName, 'Participant:')) {
+      unset($participantData[$fieldName]);
+
+      if (str_starts_with($newFieldName, 'Participant:')) {
         $participantData[substr($newFieldName, 12)] = $value;
         unset($participantData[$fieldName]);
       }
-      elseif ($newFieldName !== $fieldName) {
+      elseif (!str_starts_with($newFieldName, 'Contact:')) {
         $participantData[$newFieldName] = $value;
-        unset($participantData[$fieldName]);
       }
     }
 

@@ -22,6 +22,7 @@ namespace Civi\RemoteEventFormEditor\RegistrationProfile\Form\FieldFactory;
 use Civi\RemoteEventFormEditor\FieldType\EditorFieldType;
 use Civi\RemoteEventFormEditor\RegistrationProfile\Form\ConcreteProfileFormFieldFactoryInterface;
 use Civi\RemoteEventFormEditor\RegistrationProfile\Form\ProfileFormFieldFactory;
+use Civi\RemoteEventFormEditor\RegistrationProfile\Form\Util\DependentFieldNameUtil;
 use Civi\RemoteEventFormEditor\RegistrationProfile\Form\Util\FormFieldNameUtil;
 use Webmozart\Assert\Assert;
 
@@ -58,6 +59,9 @@ final class DefaultFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
         'validation' => $this->getValidation($editorField),
         'value' => $editorField['value'] ?? NULL,
         'parent' => $parent,
+        'dependencies' => is_array($editorField['dependencies'] ?? NULL)
+        ? DependentFieldNameUtil::toProfileFormFieldNames($editorField['dependencies'])
+        : [],
       ],
     ];
   }

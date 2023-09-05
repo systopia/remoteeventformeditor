@@ -57,6 +57,12 @@
   width: auto;
 }
 
+#bootstrap-theme input.ng-invalid,
+#bootstrap-theme select.ng-invalid,
+#bootstrap-theme textarea.ng-invalid {
+  border-color: #8a1f11;
+}
+
 .fieldset-fields {
   padding-left: 15px;
 }

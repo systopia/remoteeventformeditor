@@ -10,3 +10,7 @@
   <label for="field-value-{{ngModelItem._id}}">{{ ts('Initial Value') }}</label>
   <input id="field-value-{{ngModelItem._id}}" class="form-control" type="text" ng-model="ngModelItem.value">
 </div>
+<div class="control form-group">
+  <label for="field-dependencies-{{ngModelItem._id}}">{{ ts('Dependencies (advanced)') }}</label>
+  <textarea id="field-dependencies-{{ngModelItem._id}}" class="form-control" ng-model="ngModelItem.dependencies" fe-json></textarea>
+</div>
