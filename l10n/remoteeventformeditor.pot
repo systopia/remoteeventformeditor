@@ -114,7 +114,7 @@ msgstr ""
 msgid "Participant"
 msgstr ""
 
-#: ang/crmRemoteEventFormEditor/edit.controller.js ang/crmRemoteEventFormEditor/editor/editor.directive.js ang/crmRemoteEventFormEditor/editor-canvas/editor-canvas.directive.js ang/crmRemoteEventFormEditor/field/field.directive.js ang/crmRemoteEventFormEditor/list.controller.js ang/crmRemoteEventFormEditor/option-group/select-allowed-options.directive.js ang/crmRemoteEventFormEditor/option-group/select-initial-option.directive.js
+#: ang/crmRemoteEventFormEditor/edit.controller.js ang/crmRemoteEventFormEditor/editor/editor.directive.js ang/crmRemoteEventFormEditor/editor-canvas/editor-canvas.directive.js ang/crmRemoteEventFormEditor/field/field.directive.js ang/crmRemoteEventFormEditor/input/json.directive.js ang/crmRemoteEventFormEditor/list.controller.js ang/crmRemoteEventFormEditor/option-group/select-allowed-options.directive.js ang/crmRemoteEventFormEditor/option-group/select-initial-option.directive.js
 msgid "remoteeventformeditor"
 msgstr ""
 
@@ -198,6 +198,10 @@ msgstr ""
 msgid "Options"
 msgstr ""
 
+#: ang/crmRemoteEventFormEditor/field-types/multi-select.template.html ang/crmRemoteEventFormEditor/field-types/option-group.template.html ang/crmRemoteEventFormEditor/field-types/select.template.html
+msgid "Dependencies (advanced)"
+msgstr ""
+
 #: ang/crmRemoteEventFormEditor/field-types/number.template.html ang/crmRemoteEventFormEditor/field-types/text.template.html
 msgid "Validation"
 msgstr ""
@@ -236,6 +240,10 @@ msgstr ""
 
 #: ang/crmRemoteEventFormEditor/field-types/text.template.html
 msgid "Comma Separated Integers"
+msgstr ""
+
+#: ang/crmRemoteEventFormEditor/input/json.directive.js
+msgid "Invalid JSON"
 msgstr ""
 
 #: ang/crmRemoteEventFormEditor/list.controller.js

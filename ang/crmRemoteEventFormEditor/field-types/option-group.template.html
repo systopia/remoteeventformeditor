@@ -5,3 +5,7 @@
   <label for="field-value-{{ngModelItem._id}}">{{ ts('Initial Value') }}</label>
   <select-initial-option id="'field-value-' + ngModelItem._id" value="ngModelItem.value" options="type.options" allowed="ngModelItem.allowedOptions"></select-initial-option>
 </div>
+<div class="control form-group">
+  <label for="field-dependencies-{{ngModelItem._id}}">{{ ts('Dependencies (advanced)') }}</label>
+  <textarea id="field-dependencies-{{ngModelItem._id}}" class="form-control" ng-model="ngModelItem.dependencies" fe-json></textarea>
+</div>
