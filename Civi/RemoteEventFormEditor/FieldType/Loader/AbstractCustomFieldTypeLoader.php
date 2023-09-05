@@ -46,7 +46,7 @@ abstract class AbstractCustomFieldTypeLoader implements EditorFieldTypeLoaderInt
    * for example with fk_entity StateProvince. (With the current editor UI we
    * cannot handle so many options in a useful way.)
    */
-  private const MAX_OPTIONS_COUNT = 100;
+  private const MAX_OPTIONS_COUNT = 1000;
 
   private string $entityName;
 
