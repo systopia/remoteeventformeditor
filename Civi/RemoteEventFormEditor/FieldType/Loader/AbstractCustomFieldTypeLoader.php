@@ -57,7 +57,7 @@ abstract class AbstractCustomFieldTypeLoader implements EditorFieldTypeLoaderInt
     $this->logger = $logger;
   }
 
-  // phpcs:disable Generic.Metrics.CyclomaticComplexity.TooHigh
+  // phpcs:disable Generic.Metrics.CyclomaticComplexity.MaxExceeded
   public function getFieldTypes(): iterable {
     // phpcs:enable
     $result = $this->getEntityFields();
@@ -101,6 +101,12 @@ abstract class AbstractCustomFieldTypeLoader implements EditorFieldTypeLoaderInt
         case 'Radio':
           // fall through
         case 'Select':
+          if (is_bool($field['options'])) {
+            // Treat boolean as empty array.
+            // This happens for custom fields with a multiple choice option group that has no (active) option.
+            $field['options'] = [];
+          }
+
           Assert::isArray($field['options']);
           if (count($field['options']) > self::MAX_OPTIONS_COUNT) {
             break;
