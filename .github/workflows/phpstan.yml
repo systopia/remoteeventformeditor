@@ -38,7 +38,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        git clone --depth=1 -b issue/33 https://github.com/systopia/de.systopia.remoteevent.git &&
+        git clone --depth=1 https://github.com/systopia/de.systopia.remoteevent.git &&
         git clone --depth=1 https://github.com/systopia/de.systopia.remotetools.git &&
         composer update --no-progress --prefer-dist --${{ matrix.prefer }} &&
         composer composer-phpunit -- update --no-progress --prefer-dist &&
