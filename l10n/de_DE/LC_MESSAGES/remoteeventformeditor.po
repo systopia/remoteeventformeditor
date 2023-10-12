@@ -277,6 +277,12 @@ msgstr "Dezimalzahl"
 msgid "Regular Expression"
 msgstr "Regulärer Ausdruck"
 
+#: ang/crmRemoteEventFormEditor/field-types/option-group.template.html
+msgid ""
+"The number of options has exceeded the limit and therefore are shortened."
+msgstr ""
+"Die Anzahl der Optionen hat das Limit überschritten und sind deshalb gekürzt."
+
 #: ang/crmRemoteEventFormEditor/field-types/text.template.html
 msgid "Maximum Length"
 msgstr "Maximale Länge"
