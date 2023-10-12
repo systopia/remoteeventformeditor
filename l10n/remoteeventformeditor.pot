@@ -222,6 +222,10 @@ msgstr ""
 msgid "Regular Expression"
 msgstr ""
 
+#: ang/crmRemoteEventFormEditor/field-types/option-group.template.html
+msgid "The number of options has exceeded the limit and therefore are shortened."
+msgstr ""
+
 #: ang/crmRemoteEventFormEditor/field-types/text.template.html
 msgid "Maximum Length"
 msgstr ""

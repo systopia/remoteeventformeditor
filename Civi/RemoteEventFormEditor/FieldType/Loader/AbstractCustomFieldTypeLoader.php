@@ -44,9 +44,9 @@ abstract class AbstractCustomFieldTypeLoader implements EditorFieldTypeLoaderInt
   /**
    * A field with more than this number of options is filtered out. This happens
    * for example with fk_entity StateProvince. (With the current editor UI we
-   * cannot handle so many options in a useful way.)
+   * cannot handle so many options with acceptable performance.)
    */
-  private const MAX_OPTIONS_COUNT = 1000;
+  private const MAX_OPTIONS_COUNT = 2000;
 
   private string $entityName;
 
@@ -101,6 +101,8 @@ abstract class AbstractCustomFieldTypeLoader implements EditorFieldTypeLoaderInt
         case 'Radio':
           // fall through
         case 'Select':
+          $extraData = [];
+
           if (is_bool($field['options'])) {
             // Treat boolean as empty array.
             // This happens for custom fields with a multiple choice option group that has no (active) option.
@@ -109,10 +111,10 @@ abstract class AbstractCustomFieldTypeLoader implements EditorFieldTypeLoaderInt
 
           Assert::isArray($field['options']);
           if (count($field['options']) > self::MAX_OPTIONS_COUNT) {
-            break;
+            $field['options'] = array_slice($field['options'], 0, self::MAX_OPTIONS_COUNT, TRUE);
+            $extraData['optionLimitExceeded'] = TRUE;
           }
 
-          $extraData = [];
           if ('CheckBox' === $field['input_type'] || TRUE === ($field['input_attrs']['multiple'] ?? FALSE)) {
             $extraData['multiple'] = TRUE;
           }

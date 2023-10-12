@@ -1,3 +1,6 @@
+<div ng-if="type.optionLimitExceeded">
+  <strong>{{ ts('The number of options has exceeded the limit and therefore are shortened.') }}</strong>
+</div>
 <div class="control form-group">
   <select-allowed-options id="'field-allowed-options-' + ngModelItem._id" options="type.options" allowed="ngModelItem.allowedOptions"></select-allowed-options>
 </div>
