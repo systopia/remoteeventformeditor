@@ -180,17 +180,21 @@ final class FormEditorRegistrationProfile extends CRM_Remoteevent_RegistrationPr
    *   Maps contact entity field names to form field names.
    */
   private function getContactFieldNameMap(): array {
-    $fieldNames = [];
-    foreach (array_keys($this->getFields()) as $fieldName) {
-      if (str_starts_with($fieldName, 'Contact:')) {
-        $fieldNames[substr($fieldName, 8)] = $fieldName;
+    $contactFieldNamePrefix = FormFieldNameUtil::toProfileFormFieldName('Contact:');
+    $contactFieldNamePrefixLength = strlen($contactFieldNamePrefix);
+    $participantFieldNamePrefix = FormFieldNameUtil::toProfileFormFieldName('Participant:');
+
+    $fieldNameMap = [];
+    foreach (array_keys($this->getFields()) as $formFieldName) {
+      if (str_starts_with($formFieldName, $contactFieldNamePrefix)) {
+        $fieldNameMap[substr($formFieldName, $contactFieldNamePrefixLength)] = $formFieldName;
       }
-      elseif (!str_starts_with($fieldName, 'Participant:')) {
-        $fieldNames[$fieldName] = $fieldName;
+      elseif (!str_starts_with($formFieldName, $participantFieldNamePrefix)) {
+        $fieldNameMap[$formFieldName] = $formFieldName;
       }
     }
 
-    return $fieldNames;
+    return $fieldNameMap;
   }
 
 }
