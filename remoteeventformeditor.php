@@ -67,8 +67,6 @@ function remoteeventformeditor_civicrm_container(ContainerBuilder $container): v
 
   $container->autowire(RegisterFormEditorProfileSubscriber::class)
     ->addTag('kernel.event_subscriber');
-  $container->autowire(UpdateParticipantDataSubscriber::class)
-    ->addTag('kernel.event_subscriber');
 
   $container->autowire(ProfileFormFieldFactory::class)
     ->addArgument(new TaggedIteratorArgument(ConcreteProfileFormFieldFactoryInterface::SERVICE_TAG))

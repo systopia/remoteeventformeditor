@@ -49,11 +49,14 @@ final class OptionGroupFormFieldFactory implements ConcreteProfileFormFieldFacto
     Assert::isInstanceOf($editorFieldType, OptionGroupType::class);
     /** @var \Civi\RemoteEventFormEditor\FieldType\Type\OptionGroupType $editorFieldType */
 
+    [$entityName, $entityFieldName] = explode(':', $editorField['target'], 2);
     $fieldName = FormFieldNameUtil::toProfileFormFieldName($editorField['target']);
 
     return [
       $fieldName => [
         'name' => $fieldName,
+        'entity_name' => $entityName,
+        'entity_field_name' => $entityFieldName,
         'type' => $editorFieldType->isMultiple() ? 'Multi-Select' : 'Select',
         'weight' => $weight++,
         // @phpstan-ignore-next-line

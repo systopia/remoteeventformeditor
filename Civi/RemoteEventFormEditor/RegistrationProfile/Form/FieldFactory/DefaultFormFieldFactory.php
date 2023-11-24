@@ -45,11 +45,14 @@ final class DefaultFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
     Assert::string($editorField['target']);
     Assert::string($editorField['label']);
 
+    [$entityName, $entityFieldName] = explode(':', $editorField['target'], 2);
     $fieldName = FormFieldNameUtil::toProfileFormFieldName($editorField['target']);
 
     return [
       $fieldName => [
         'name' => $fieldName,
+        'entity_name' => $entityName,
+        'entity_field_name' => $entityFieldName,
         'type' => $this->getType($editorField, $editorFieldType),
         'weight' => $weight++,
         'required' => ($editorField['required'] ?? FALSE) === TRUE ? 1 : 0,
