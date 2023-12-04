@@ -42,13 +42,15 @@ final class HiddenFormFieldFactory implements ConcreteProfileFormFieldFactoryInt
   ): array {
     Assert::string($editorField['target']);
     Assert::true($editorField['hidden'] ?? FALSE);
+    [$entityName, $entityFieldName] = explode(':', $editorField['target'], 2);
 
     return [
       $editorField['target'] => [
         'name' => $editorField['target'],
+        'entity_name' => $entityName,
+        'entity_field_name' => $entityFieldName,
+        'type' => 'Value',
         'value' => $editorField['value'] ?? NULL,
-        // Not supported by form field spec, so has to be handled by caller.
-        '#hidden' => TRUE,
       ],
     ];
   }

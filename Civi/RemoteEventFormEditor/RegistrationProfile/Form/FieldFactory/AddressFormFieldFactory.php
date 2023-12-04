@@ -102,6 +102,8 @@ final class AddressFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
     return [
       FormFieldNameUtil::toProfileFormFieldName('Contact:street_address') => [
         'name' => FormFieldNameUtil::toProfileFormFieldName('Contact:street_address'),
+        'entity_name' => 'Contact',
+        'entity_field_name' => 'street_address',
         'type' => 'Text',
         'weight' => $weight++,
         'required' => $editorField['street'] === 'required' ? 1 : 0,
@@ -125,10 +127,13 @@ final class AddressFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
 
     for ($i = 1; $i <= 3; ++$i) {
       $editorFieldName = 'supplementalAddress' . $i;
-      $fieldName = FormFieldNameUtil::toProfileFormFieldName('Contact:supplemental_address_') . $i;
       if ('none' !== ($editorField[$editorFieldName] ?? 'none')) {
+        $entityFieldName = 'supplemental_address_' . $i;
+        $fieldName = FormFieldNameUtil::toProfileFormFieldName('Contact:' . $entityFieldName);
         $fields[$fieldName] = [
           'name' => $fieldName,
+          'entity_name' => 'Contact',
+          'entity_field_name' => $entityFieldName,
           'type' => 'Text',
           'weight' => $weight++,
           'required' => $editorField[$editorFieldName] === 'required' ? 1 : 0,
@@ -158,6 +163,8 @@ final class AddressFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
     return [
       FormFieldNameUtil::toProfileFormFieldName('Contact:city') => [
         'name' => FormFieldNameUtil::toProfileFormFieldName('Contact:city'),
+        'entity_name' => 'Contact',
+        'entity_field_name' => 'city',
         'type' => 'Text',
         'weight' => $weight++,
         'required' => $editorField['city'] === 'required' ? 1 : 0,
@@ -183,6 +190,8 @@ final class AddressFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
     return [
       FormFieldNameUtil::toProfileFormFieldName('Contact:postal_code') => [
         'name' => FormFieldNameUtil::toProfileFormFieldName('Contact:postal_code'),
+        'entity_name' => 'Contact',
+        'entity_field_name' => 'postal_code',
         'type' => 'Text',
         'weight' => $weight++,
         'required' => $editorField['postalCode'] === 'required' ? 1 : 0,
@@ -211,6 +220,8 @@ final class AddressFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
     $fields = [
       FormFieldNameUtil::toProfileFormFieldName('Contact:country_id') => [
         'name' => FormFieldNameUtil::toProfileFormFieldName('Contact:country_id'),
+        'entity_name' => 'Contact',
+        'entity_field_name' => 'country_id',
         'type' => 'Select',
         'options' => ArrayUtil::flip($countryIds),
         'weight' => $weight++,
@@ -235,6 +246,12 @@ final class AddressFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
 
       $fields[FormFieldNameUtil::toProfileFormFieldName('Contact:state_province_id')] = [
         'name' => FormFieldNameUtil::toProfileFormFieldName('Contact:state_province_id'),
+        'entity_name' => 'Contact',
+        'entity_field_name' => 'state_province_id',
+        'value_callback' => fn ($value) => is_string($value) && str_contains($value, '-')
+        ? explode('-', $value, 2)[1]
+        : $value,
+        'prefill_value_callback' => fn ($value, array $contact) => $contact['country_id'] . '-' . $value,
         'type' => 'Select',
         'weight' => $weight++,
         'required' => $editorField['stateProvince'] === 'required' ? 1 : 0,

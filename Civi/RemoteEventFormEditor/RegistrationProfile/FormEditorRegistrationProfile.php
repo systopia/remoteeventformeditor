@@ -18,8 +18,6 @@ declare(strict_types = 1);
 namespace Civi\RemoteEventFormEditor\RegistrationProfile;
 
 use Civi\RemoteEventFormEditor\RegistrationProfile\Form\ProfileFormFieldFactory;
-use Civi\RemoteEventFormEditor\RegistrationProfile\Form\Util\FormFieldNameUtil;
-use Civi\RemoteParticipant\Event\GetParticipantFormEventBase;
 use CRM_Remoteevent_RegistrationProfile;
 
 /**
@@ -27,7 +25,7 @@ use CRM_Remoteevent_RegistrationProfile;
  *   id: int,
  *   identifier: string,
  *   name: string,
- *   fields: array<array<string, mixed>>
+ *   fields: array<array<string, mixed>>,
  * }
  * Values returned by RemoteEventFormEditorForm::get().
  *
@@ -53,11 +51,6 @@ final class FormEditorRegistrationProfile extends CRM_Remoteevent_RegistrationPr
    * @phpstan-var array<string, array<string, mixed>>
    */
   private array $profileFormFields = [];
-
-  /**
-   * @phpstan-var array<string, array<string, mixed>>
-   */
-  private array $profileHiddenFormFields = [];
 
   /**
    * @phpstan-param formT $form
@@ -89,15 +82,6 @@ final class FormEditorRegistrationProfile extends CRM_Remoteevent_RegistrationPr
 
   /**
    * @inheritDoc
-   */
-  public function addDefaultValues(GetParticipantFormEventBase $resultsEvent): void {
-    $fieldNameMap = $this->getContactFieldNameMap();
-    $this->addDefaultContactValues($resultsEvent, array_keys($fieldNameMap), $fieldNameMap);
-    // @todo: Address fields
-  }
-
-  /**
-   * @inheritDoc
    *
    * @phpstan-return array<string, array<string, mixed>>
    */
@@ -105,53 +89,6 @@ final class FormEditorRegistrationProfile extends CRM_Remoteevent_RegistrationPr
     $this->initProfileFormFields();
 
     return $this->profileFormFields;
-  }
-
-  /**
-   * {@inheritDoc}
-   *
-   * @phpstan-param array<string, mixed> $contactData
-   *
-   * phpcs:disable Generic.Metrics.CyclomaticComplexity.TooHigh
-   */
-  protected function adjustContactData(&$contactData): void {
-    // phpcs:enable
-    foreach ($contactData as $fieldName => $value) {
-      $newFieldName = FormFieldNameUtil::fromProfileFormFieldName($fieldName);
-      unset($contactData[$fieldName]);
-
-      if ('Contact:state_province_id' === $newFieldName) {
-        // value contains "{country_id}-{state_province_id}"
-        if (is_string($value) && str_contains($value, '-')) {
-          $value = explode('-', $value, 2)[1];
-        }
-        $contactData['state_province_id'] = $value;
-      }
-      elseif (str_starts_with($newFieldName, 'Contact:')) {
-        $contactData[substr($newFieldName, 8)] = $value;
-      }
-      elseif (!str_starts_with($fieldName, 'Participant:')) {
-        $contactData[$newFieldName] = $value;
-      }
-    }
-
-    foreach ($this->getHiddenFields() as $fieldName => $field) {
-      if (str_starts_with($fieldName, 'Contact:')) {
-        $contactData[substr($fieldName, 8)] = $field['value'];
-      }
-      elseif (!str_starts_with($fieldName, 'Participant:')) {
-        $contactData[$fieldName] = $field['value'] ?? NULL;
-      }
-    }
-  }
-
-  /**
-   * @phpstan-return array<string, array<string, mixed>>
-   */
-  private function getHiddenFields(): array {
-    $this->initProfileFormFields();
-
-    return $this->profileHiddenFormFields;
   }
 
   private function initProfileFormFields(): void {
@@ -166,35 +103,8 @@ final class FormEditorRegistrationProfile extends CRM_Remoteevent_RegistrationPr
     }
 
     foreach ($fields as $name => $field) {
-      if (($field['#hidden'] ?? FALSE) === TRUE) {
-        $this->profileHiddenFormFields[$name] = $field;
-      }
-      else {
-        $this->profileFormFields[$name] = $field;
-      }
+      $this->profileFormFields[$name] = $field;
     }
-  }
-
-  /**
-   * @phpstan-return array<string, string>
-   *   Maps contact entity field names to form field names.
-   */
-  private function getContactFieldNameMap(): array {
-    $contactFieldNamePrefix = FormFieldNameUtil::toProfileFormFieldName('Contact:');
-    $contactFieldNamePrefixLength = strlen($contactFieldNamePrefix);
-    $participantFieldNamePrefix = FormFieldNameUtil::toProfileFormFieldName('Participant:');
-
-    $fieldNameMap = [];
-    foreach (array_keys($this->getFields()) as $formFieldName) {
-      if (str_starts_with($formFieldName, $contactFieldNamePrefix)) {
-        $fieldNameMap[substr($formFieldName, $contactFieldNamePrefixLength)] = $formFieldName;
-      }
-      elseif (!str_starts_with($formFieldName, $participantFieldNamePrefix)) {
-        $fieldNameMap[$formFieldName] = $formFieldName;
-      }
-    }
-
-    return $fieldNameMap;
   }
 
 }
