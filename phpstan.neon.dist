@@ -36,7 +36,6 @@ parameters:
 	ignoreErrors:
 		# Note paths are prefixed with ""*/" to wirk with inspections in PHPStorm because of:
 		# https://youtrack.jetbrains.com/issue/WI-63891/PHPStan-ignoreErrors-configuration-isnt-working-with-inspections
-		- '/^Parameter #[0-9]+ \$[^\s]+ \(array[^)]+\) of method [^\s]+ should be contravariant with parameter \$[^\s]+ \(array\) of method [^\s]+.$/'
 		- '#^Method Civi\\RemoteEventFormEditor\\FieldType\\EditorFieldType::toArray\(\) should return array\{[^}]+\} but returns non-empty-array<string, mixed>.$#'
 		- '/^Parameter #1 \$iterator of function iterator_to_array expects Traversable, iterable(<.+>)? given.$/' # false positive
 	tmpDir: .phpstan

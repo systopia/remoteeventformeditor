@@ -73,7 +73,12 @@ abstract class AbstractCustomFieldTypeLoader implements EditorFieldTypeLoaderInt
 
       switch ($field['input_type']) {
         case 'Date':
-          yield new EditorFieldType($identifier, 'date', $label, $initialData);
+          if ('Timestamp' === $field['data_type']) {
+            yield new EditorFieldType($identifier, 'datetime', $label, $initialData);
+          }
+          else {
+            yield new EditorFieldType($identifier, 'date', $label, $initialData);
+          }
           break;
 
         case 'Text':
@@ -174,6 +179,9 @@ abstract class AbstractCustomFieldTypeLoader implements EditorFieldTypeLoaderInt
 
       case 'Date':
         return 'Date';
+
+      case 'Timestamp':
+        return 'Timestamp';
 
       case 'Url':
         return 'Link';
