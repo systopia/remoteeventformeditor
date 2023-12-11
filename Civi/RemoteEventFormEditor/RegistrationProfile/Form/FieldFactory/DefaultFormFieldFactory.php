@@ -59,7 +59,7 @@ final class DefaultFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
         'label' => $editorField['label'],
         'description' => $editorField['description'] ?? NULL,
         'maxlength' => $editorField['maxLength'] ?? NULL,
-        'validation' => $this->getValidation($editorField),
+        'validation' => $this->getValidation($editorField, $editorFieldType),
         'value' => $editorField['value'] ?? NULL,
         'parent' => $parent,
         'dependencies' => is_array($editorField['dependencies'] ?? NULL)
@@ -77,6 +77,7 @@ final class DefaultFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
       'text',
       'number',
       'date',
+      'datetime',
       'checkbox',
     ], TRUE);
   }
@@ -95,6 +96,9 @@ final class DefaultFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
       case 'date':
         return 'Date';
 
+      case 'datetime':
+        return 'Datetime';
+
       case 'checkbox':
         return 'Checkbox';
 
@@ -106,13 +110,20 @@ final class DefaultFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
   /**
    * @phpstan-param array<string, mixed> $editorField
    */
-  private function getValidation(array $editorField): ?string {
+  private function getValidation(array $editorField, EditorFieldType $editorFieldType): ?string {
     $validation = $editorField['validation'] ?? NULL;
     Assert::nullOrString($validation);
     if ($validation === 'regex') {
       Assert::string($editorField['validationRegex']);
 
       return 'regex:' . $this->getRegex($editorField['validationRegex']);
+    }
+
+    if (('date' === $editorFieldType->getInput() || 'datetime' === $editorFieldType->getInput()) && 'Text' === $validation) {
+      // Custom fields with data_type 'Timestamp' falsely used to have 'Text' as validation. Because it is possible to
+      // switch between data_type 'Timestamp' and 'Date' we have to check both inputs.
+      // @phpstan-ignore-next-line
+      return $editorFieldType->getInitialData()['validation'] ?? $validation;
     }
 
     return $validation;

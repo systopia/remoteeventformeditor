@@ -128,6 +128,10 @@ msgid "Date"
 msgstr "Datum"
 
 #: Civi/RemoteEventFormEditor/FieldType/Loader/GenericFieldTypeLoader.php
+msgid "Date and Time"
+msgstr "Datum und Zeit"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/GenericFieldTypeLoader.php
 msgid "Checkbox"
 msgstr "Checkbox"
 
@@ -214,6 +218,7 @@ msgstr "Optional"
 
 #: ang/crmRemoteEventFormEditor/field-types/checkbox.template.html
 #: ang/crmRemoteEventFormEditor/field-types/date.template.html
+#: ang/crmRemoteEventFormEditor/field-types/datetime.template.html
 #: ang/crmRemoteEventFormEditor/field-types/location-type.template.html
 #: ang/crmRemoteEventFormEditor/field-types/multi-select.template.html
 #: ang/crmRemoteEventFormEditor/field-types/number.template.html
@@ -227,6 +232,7 @@ msgid "Initially Set"
 msgstr "Initial gesetzt"
 
 #: ang/crmRemoteEventFormEditor/field-types/date.template.html
+#: ang/crmRemoteEventFormEditor/field-types/datetime.template.html
 #: ang/crmRemoteEventFormEditor/field-types/location-type.template.html
 #: ang/crmRemoteEventFormEditor/field-types/multi-select.template.html
 #: ang/crmRemoteEventFormEditor/field-types/number.template.html

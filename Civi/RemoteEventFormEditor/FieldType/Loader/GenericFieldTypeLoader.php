@@ -33,6 +33,7 @@ final class GenericFieldTypeLoader implements EditorFieldTypeLoaderInterface {
     // yield new EditorFieldType('select', 'select', E::ts('Select'));
     // yield new EditorFieldType('multi-select', 'multi-select', E::ts('Multi select'));
     yield new EditorFieldType('date', 'date', E::ts('Date'), ['validation' => 'Date']);
+    yield new EditorFieldType('datetime', 'datetime', E::ts('Date and Time'), ['validation' => 'Timestamp']);
     yield new EditorFieldType('checkbox', 'checkbox', E::ts('Checkbox'), ['validation' => 'Boolean']);
   }
 
