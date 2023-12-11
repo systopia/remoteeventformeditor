@@ -15,7 +15,7 @@ This extension is licensed under [AGPL-3.0](LICENSE.txt).
 
 * PHP 7.4 or PHP 8
 * CiviCRM 5.48+
-* [Remote Tools](https://github.com/systopia/de.systopia.remotetools) 1.2+
+* [Remote Event](https://github.com/systopia/de.systopia.remoteevent) 1.2+
 * Requirements specified in `composer.json`
   * webmozart/assert
   * symfony/polyfill-php80 (if PHP 7.4 is used.)
