@@ -52,7 +52,7 @@ final class OptionGroupFormFieldFactory implements ConcreteProfileFormFieldFacto
     [$entityName, $entityFieldName] = explode(':', $editorField['target'], 2);
     $fieldName = FormFieldNameUtil::toProfileFormFieldName($editorField['target']);
 
-    return [
+    $fields = [
       $fieldName => [
         'name' => $fieldName,
         'entity_name' => $entityName,
@@ -66,11 +66,19 @@ final class OptionGroupFormFieldFactory implements ConcreteProfileFormFieldFacto
         'description' => $editorField['description'] ?? NULL,
         'value' => $editorField['value'] ?? NULL,
         'parent' => $parent,
-        'dependencies' => is_array($editorField['dependencies'] ?? NULL)
-        ? DependentFieldNameUtil::toProfileFormFieldNames($editorField['dependencies'])
-        : [],
+        'dependencies' => DependentFieldNameUtil::getDependentProfileFormFieldNames($editorField),
       ],
     ];
+
+    if (($editorField['validation'] ?? NULL) === 'Boolean') {
+      // CiviCRM uses "0" and "1" as options for boolean fields, so we have to
+      // convert the loaded value. We do not perform the inverse conversion
+      // because the APIv3 calls used in de.systopia.remoteevent work better
+      // with integers/integerish strings.
+      $fields[$fieldName]['prefill_value_callback'] = fn ($value) => NULL === $value ? NULL : ($value ? '1' : '0');
+    }
+
+    return $fields;
   }
 
   /**
