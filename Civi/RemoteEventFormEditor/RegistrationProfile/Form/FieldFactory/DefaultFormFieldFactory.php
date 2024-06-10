@@ -62,9 +62,7 @@ final class DefaultFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
         'validation' => $this->getValidation($editorField, $editorFieldType),
         'value' => $editorField['value'] ?? NULL,
         'parent' => $parent,
-        'dependencies' => is_array($editorField['dependencies'] ?? NULL)
-        ? DependentFieldNameUtil::toProfileFormFieldNames($editorField['dependencies'])
-        : [],
+        'dependencies' => DependentFieldNameUtil::getDependentProfileFormFieldNames($editorField),
       ],
     ];
   }

@@ -22,6 +22,25 @@ namespace Civi\RemoteEventFormEditor\RegistrationProfile\Form\Util;
 final class DependentFieldNameUtil {
 
   /**
+   * Converts the dependent field names of the editor field to the names used in
+   * the profile form. If the field has no dependencies an empty array is
+   * returned.
+   *
+   * @phpstan-param array<string, mixed> $editorField
+   *
+   * @phpstan-return array<array<string, mixed>>
+   *
+   * @see toProfileFormFieldNames()
+   */
+  public static function getDependentProfileFormFieldNames(array $editorField): array {
+    if (!is_array($editorField['dependencies'] ?? NULL)) {
+      return [];
+    }
+
+    return self::toProfileFormFieldNames($editorField['dependencies']);
+  }
+
+  /**
    * Converts the dependent field names to the names used in the profile form.
    *
    * @phpstan-param array<array<string, mixed>> $dependencies
