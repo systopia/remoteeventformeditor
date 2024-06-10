@@ -119,7 +119,13 @@ final class DefaultFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
       return 'regex:' . $this->getRegex($editorField['validationRegex']);
     }
 
-    if (('date' === $editorFieldType->getInput() || 'datetime' === $editorFieldType->getInput()) && 'Text' === $validation) {
+    if (
+      (
+        'date' === $editorFieldType->getInput()
+        || 'datetime' === $editorFieldType->getInput()
+      )
+      && 'Text' === $validation
+    ) {
       // Custom fields with data_type 'Timestamp' falsely used to have 'Text' as validation. Because it is possible to
       // switch between data_type 'Timestamp' and 'Date' we have to check both inputs.
       // @phpstan-ignore-next-line

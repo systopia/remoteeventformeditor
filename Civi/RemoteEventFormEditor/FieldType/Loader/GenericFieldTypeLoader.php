@@ -29,7 +29,9 @@ final class GenericFieldTypeLoader implements EditorFieldTypeLoaderInterface {
     yield new EditorFieldType('fieldset', 'fieldset', E::ts('Group'), ['items' => []]);
     yield new EditorFieldType('text', 'text', E::ts('Text'), ['validation' => 'Text']);
     yield new EditorFieldType('number', 'number', E::ts('Number'), ['validation' => 'Float']);
+    // phpcs:disable Squiz.PHP.CommentedOutCode.Found
     // Disabled for now until we have a proper way to set the options in the UI.
+    // phpcs:enable
     // yield new EditorFieldType('select', 'select', E::ts('Select'));
     // yield new EditorFieldType('multi-select', 'multi-select', E::ts('Multi select'));
     yield new EditorFieldType('date', 'date', E::ts('Date'), ['validation' => 'Date']);
