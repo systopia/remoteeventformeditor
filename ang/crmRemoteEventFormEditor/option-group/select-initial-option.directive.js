@@ -30,7 +30,7 @@ remoteEventFormEditorModule.directive('selectInitialOption', function () {
     controller: ['$scope', function ($scope) {
       $scope.ts = CRM.ts('remoteeventformeditor');
       if (!Object.values($scope.allowed).includes($scope.value)) {
-        $scope.value = undefined;
+        $scope.value = null;
       }
     }],
   };
