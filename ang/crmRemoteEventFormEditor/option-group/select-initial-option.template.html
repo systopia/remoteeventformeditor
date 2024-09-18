@@ -1,4 +1,4 @@
 <select id="{{id}}" class="form-control" ng-model="value" ng-required="required">
-  <option ng-if="!required"></option>
-  <option ng-repeat="(label, value) in options" ng-show="allowed.includes(value)" ng-value="{{value}}">{{label}}</option>
+  <option ng-value="null" ng-if="!required"></option>
+  <option ng-repeat="(label, value) in options" ng-show="allowed.includes(value)" ng-value="value">{{label}}</option>
 </select>

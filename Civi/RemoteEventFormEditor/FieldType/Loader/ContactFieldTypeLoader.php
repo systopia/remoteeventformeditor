@@ -159,6 +159,18 @@ final class ContactFieldTypeLoader implements EditorFieldTypeLoaderInterface {
       'validation' => 'Text',
       'maxLength' => 255,
     ]);
+
+    yield new OptionGroupType(
+      'preferred_language',
+      E::ts('Preferred Language'),
+      $this->optionsLoader->getOptions('Contact', 'preferred_language'),
+      [
+        'label' => E::ts('Preferred Language'),
+        'target' => 'Contact:preferred_language',
+        'required' => FALSE,
+        'validation' => 'String',
+      ]
+    );
   }
 
 }
