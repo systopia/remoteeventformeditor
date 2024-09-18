@@ -115,6 +115,7 @@ final class ContactFieldTypeLoader implements EditorFieldTypeLoaderInterface {
       'target' => 'Contact:email',
       'required' => TRUE,
       'validation' => 'Email',
+      'maxLength' => 254,
     ]);
 
     yield new EditorFieldType('phone', 'text', E::ts('Phone'), [
@@ -122,6 +123,7 @@ final class ContactFieldTypeLoader implements EditorFieldTypeLoaderInterface {
       'target' => 'Contact:phone',
       'required' => TRUE,
       'validation' => 'Text',
+      'maxLength' => 32,
     ]);
 
     yield new OptionGroupType('prefix', E::ts('Prefix'),
@@ -146,6 +148,16 @@ final class ContactFieldTypeLoader implements EditorFieldTypeLoaderInterface {
       'label' => E::ts('Title'),
       'target' => 'Contact:formal_title',
       'required' => FALSE,
+      'validation' => 'Text',
+      'maxLength' => 64,
+    ]);
+
+    yield new EditorFieldType('job_title', 'text', E::ts('Job Title'), [
+      'label' => E::ts('Job Title'),
+      'target' => 'Contact:job_title',
+      'required' => FALSE,
+      'validation' => 'Text',
+      'maxLength' => 255,
     ]);
   }
 
