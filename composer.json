@@ -1,12 +1,18 @@
 {
+    "name": "systopia/remoteeventformeditor",
+    "type": "civicrm-ext",
+    "license": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "SYSTOPIA GmbH",
+            "email": "info@systopia.de",
+            "homepage": "https://www.systopia.de"
+        }
+    ],
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "allow-plugins": {
-            "civicrm/composer-compile-plugin": true,
-            "civicrm/composer-downloads-plugin": true,
-            "cweagans/composer-patches": true
-        },
+        "prepend-autoloader": false,
         "sort-packages": true
     },
     "require": {
@@ -14,7 +20,7 @@
         "symfony/polyfill-php80": ">=1"
     },
     "scripts": {
-       "composer-phpcs": [
+        "composer-phpcs": [
             "@composer --working-dir=tools/phpcs"
         ],
         "composer-phpstan": [

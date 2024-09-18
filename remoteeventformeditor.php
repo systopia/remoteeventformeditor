@@ -7,7 +7,6 @@ require_once 'remoteeventformeditor.civix.php';
 
 use Civi\RemoteEventFormEditor\Api4\OptionsLoader;
 use Civi\RemoteEventFormEditor\EventSubscriber\RegisterFormEditorProfileSubscriber;
-use Civi\RemoteEventFormEditor\EventSubscriber\UpdateParticipantDataSubscriber;
 use Civi\RemoteEventFormEditor\FieldType\FieldTypeContainer;
 use Civi\RemoteEventFormEditor\FieldType\FieldTypeGroupContainer;
 use Civi\RemoteEventFormEditor\FieldType\Loader\ContactCustomFieldTypeLoader;
@@ -48,7 +47,7 @@ function _remoteeventformeditor_composer_autoload(): void {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_config/
  */
-function remoteeventformeditor_civicrm_config(&$config) {
+function remoteeventformeditor_civicrm_config(\CRM_Core_Config $config): void {
   _remoteeventformeditor_composer_autoload();
   _remoteeventformeditor_civix_civicrm_config($config);
 }
@@ -118,7 +117,7 @@ function remoteeventformeditor_civicrm_container(ContainerBuilder $container): v
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_install
  */
-function remoteeventformeditor_civicrm_install() {
+function remoteeventformeditor_civicrm_install(): void {
   _remoteeventformeditor_civix_civicrm_install();
 }
 
@@ -127,34 +126,6 @@ function remoteeventformeditor_civicrm_install() {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_enable
  */
-function remoteeventformeditor_civicrm_enable() {
+function remoteeventformeditor_civicrm_enable(): void {
   _remoteeventformeditor_civix_civicrm_enable();
 }
-
-// --- Functions below this ship commented out. Uncomment as required. ---
-
-/**
- * Implements hook_civicrm_preProcess().
- *
- * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_preProcess
- */
-//function remoteeventformeditor_civicrm_preProcess($formName, &$form) {
-//
-//}
-
-/**
- * Implements hook_civicrm_navigationMenu().
- *
- * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_navigationMenu
- */
-//function remoteeventformeditor_civicrm_navigationMenu(&$menu) {
-//  _remoteeventformeditor_civix_insert_navigation_menu($menu, 'Mailings', [
-//    'label' => E::ts('New subliminal message'),
-//    'name' => 'mailing_subliminal_message',
-//    'url' => 'civicrm/mailing/subliminal',
-//    'permission' => 'access CiviMail',
-//    'operator' => 'OR',
-//    'separator' => 0,
-//  ]);
-//  _remoteeventformeditor_civix_navigationMenu($menu);
-//}
