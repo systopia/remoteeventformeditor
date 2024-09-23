@@ -48,7 +48,7 @@ final class DefaultFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
     [$entityName, $entityFieldName] = explode(':', $editorField['target'], 2);
     $fieldName = FormFieldNameUtil::toProfileFormFieldName($editorField['target']);
 
-    return [
+    $fields = [
       $fieldName => [
         'name' => $fieldName,
         'entity_name' => $entityName,
@@ -58,13 +58,21 @@ final class DefaultFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
         'required' => ($editorField['required'] ?? FALSE) === TRUE ? 1 : 0,
         'label' => $editorField['label'],
         'description' => $editorField['description'] ?? NULL,
-        'maxlength' => $editorField['maxLength'] ?? NULL,
         'validation' => $this->getValidation($editorField, $editorFieldType),
         'value' => $editorField['value'] ?? NULL,
         'parent' => $parent,
         'dependencies' => DependentFieldNameUtil::getDependentProfileFormFieldNames($editorField),
       ],
     ];
+
+    if ('file' === $editorFieldType->getInput()) {
+      $fields[$fieldName]['max_filesize'] = $editorField['maxFilesize'] ?? NULL;
+    }
+    else {
+      $fields[$fieldName]['maxlength'] = $editorField['maxLength'] ?? NULL;
+    }
+
+    return $fields;
   }
 
   /**
@@ -77,6 +85,7 @@ final class DefaultFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
       'date',
       'datetime',
       'checkbox',
+      'file',
     ], TRUE);
   }
 
@@ -99,6 +108,9 @@ final class DefaultFormFieldFactory implements ConcreteProfileFormFieldFactoryIn
 
       case 'checkbox':
         return 'Checkbox';
+
+      case 'file':
+        return 'File';
 
       default:
         throw new \InvalidArgumentException(sprintf('Unsupported input type "%s"', $editorFieldType->getInput()));

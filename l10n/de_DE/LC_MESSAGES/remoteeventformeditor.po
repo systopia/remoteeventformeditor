@@ -219,6 +219,7 @@ msgstr "Optional"
 #: ang/crmRemoteEventFormEditor/field-types/checkbox.template.html
 #: ang/crmRemoteEventFormEditor/field-types/date.template.html
 #: ang/crmRemoteEventFormEditor/field-types/datetime.template.html
+#: ang/crmRemoteEventFormEditor/field-types/file.template.html
 #: ang/crmRemoteEventFormEditor/field-types/location-type.template.html
 #: ang/crmRemoteEventFormEditor/field-types/multi-select.template.html
 #: ang/crmRemoteEventFormEditor/field-types/number.template.html
@@ -241,6 +242,17 @@ msgstr "Initial gesetzt"
 #: ang/crmRemoteEventFormEditor/field-types/text.template.html
 msgid "Initial Value"
 msgstr "Initialer Wert"
+
+#: ang/crmRemoteEventFormEditor/field-types/file.template.html
+msgid "Maximum Length in Bytes"
+msgstr "Maximale Länge in Bytes"
+
+#: ang/crmRemoteEventFormEditor/field-types/file.template.html
+msgid ""
+"An existing file cannot be removed on update, only be replaced by a new one."
+msgstr ""
+"Eine existierende Datei kann beim Aktualisieren nicht entfernt, sondern nur "
+"durch eine neue ersetzt werden."
 
 #: ang/crmRemoteEventFormEditor/field-types/location-type.template.html
 msgid "Hidden"
