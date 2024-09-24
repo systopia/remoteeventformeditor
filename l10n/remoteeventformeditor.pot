@@ -178,7 +178,7 @@ msgstr ""
 msgid "Optional"
 msgstr ""
 
-#: ang/crmRemoteEventFormEditor/field-types/checkbox.template.html ang/crmRemoteEventFormEditor/field-types/date.template.html ang/crmRemoteEventFormEditor/field-types/datetime.template.html ang/crmRemoteEventFormEditor/field-types/location-type.template.html ang/crmRemoteEventFormEditor/field-types/multi-select.template.html ang/crmRemoteEventFormEditor/field-types/number.template.html ang/crmRemoteEventFormEditor/field-types/select.template.html ang/crmRemoteEventFormEditor/field-types/text.template.html
+#: ang/crmRemoteEventFormEditor/field-types/checkbox.template.html ang/crmRemoteEventFormEditor/field-types/date.template.html ang/crmRemoteEventFormEditor/field-types/datetime.template.html ang/crmRemoteEventFormEditor/field-types/file.template.html ang/crmRemoteEventFormEditor/field-types/location-type.template.html ang/crmRemoteEventFormEditor/field-types/multi-select.template.html ang/crmRemoteEventFormEditor/field-types/number.template.html ang/crmRemoteEventFormEditor/field-types/select.template.html ang/crmRemoteEventFormEditor/field-types/text.template.html
 msgid "Target"
 msgstr ""
 
@@ -188,6 +188,14 @@ msgstr ""
 
 #: ang/crmRemoteEventFormEditor/field-types/date.template.html ang/crmRemoteEventFormEditor/field-types/datetime.template.html ang/crmRemoteEventFormEditor/field-types/location-type.template.html ang/crmRemoteEventFormEditor/field-types/multi-select.template.html ang/crmRemoteEventFormEditor/field-types/number.template.html ang/crmRemoteEventFormEditor/field-types/option-group.template.html ang/crmRemoteEventFormEditor/field-types/select.template.html ang/crmRemoteEventFormEditor/field-types/text.template.html
 msgid "Initial Value"
+msgstr ""
+
+#: ang/crmRemoteEventFormEditor/field-types/file.template.html
+msgid "Maximum Length in Bytes"
+msgstr ""
+
+#: ang/crmRemoteEventFormEditor/field-types/file.template.html
+msgid "An existing file cannot be removed on update, only be replaced by a new one."
 msgstr ""
 
 #: ang/crmRemoteEventFormEditor/field-types/location-type.template.html

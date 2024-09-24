@@ -1,0 +1,11 @@
+<div class="control form-group">
+    <label for="field-target-{{ngModelItem._id}}">{{ ts('Target') }}</label>
+    <input id="field-target-{{ngModelItem._id}}" class="form-control" type="text" ng-model="ngModelItem.target" ng-required="true">
+</div>
+<div class="control form-group">
+    <label for="field-max-filesize-{{ngModelItem._id}}">{{ ts('Maximum Length in Bytes') }}</label>
+    <input id="field-max-filesize-{{ngModelItem._id}}" class="form-control" type="number" min="1" ng-model="ngModelItem.maxFilesize">
+</div>
+<div>
+  {{ ts('An existing file cannot be removed on update, only be replaced by a new one.') }}
+</div>

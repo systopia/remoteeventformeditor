@@ -128,11 +128,15 @@ abstract class AbstractCustomFieldTypeLoader implements EditorFieldTypeLoaderInt
           break;
 
         case 'RichTextEditor':
-          // fall through
-        case 'EntityRef':
-          // fall through
-        case 'File':
           // not supported
+          break;
+
+        case 'EntityRef':
+          // not supported
+          break;
+
+        case 'File':
+          yield new EditorFieldType($identifier, 'file', $label, $initialData);
           break;
 
         default:
