@@ -3,7 +3,7 @@ set -eu -o pipefail
 
 XCM_VERSION=1.13.1
 IDENTITYTRACKER_VERSION=1.4.0
-REMOTETOOLS_VERSION=0.10.0
+REMOTETOOLS_VERSION=0.11.0
 REMOTEEVENT_BRANCH=master
 
 EXT_DIR=$(dirname "$(dirname "$(realpath "$0")")")
