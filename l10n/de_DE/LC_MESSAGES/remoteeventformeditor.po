@@ -11,6 +11,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.0.1\n"
 
+#: Civi/RemoteEventFormEditor/FieldType/Loader/AbstractCustomFieldTypeLoader.php
+msgid "No"
+msgstr "Nein"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/AbstractCustomFieldTypeLoader.php
+msgid "Yes"
+msgstr "Ja"
+
 #: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeGroupLoader.php
 msgid "Contact"
 msgstr "Kontakt"
@@ -106,6 +114,14 @@ msgstr "Suffix"
 #: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
 msgid "Title"
 msgstr "Titel"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+msgid "Job Title"
+msgstr "Funktion"
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+msgid "Preferred Language"
+msgstr "Bevorzugte Sprache"
 
 #: Civi/RemoteEventFormEditor/FieldType/Loader/GenericFieldTypeGroupLoader.php
 msgid "Generic"

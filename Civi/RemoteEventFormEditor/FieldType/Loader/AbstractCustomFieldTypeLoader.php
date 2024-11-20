@@ -25,6 +25,7 @@ use Civi\RemoteEventFormEditor\FieldType\EditorFieldTypeLoaderInterface;
 use Civi\RemoteEventFormEditor\FieldType\Type\OptionGroupType;
 use Psr\Log\LoggerInterface;
 use Webmozart\Assert\Assert;
+use CRM_RemoteEventFormEditor_ExtensionUtil as E;
 
 /**
  * @phpstan-type field array{
@@ -109,9 +110,18 @@ abstract class AbstractCustomFieldTypeLoader implements EditorFieldTypeLoaderInt
           $extraData = [];
 
           if (is_bool($field['options'])) {
-            // Treat boolean as empty array.
-            // This happens for custom fields with a multiple choice option group that has no (active) option.
-            $field['options'] = [];
+            if ('Boolean' === $field['data_type']) {
+              // CiviCRM used to give that options for booleans, nowadays, it's just false. (At least since 5.78)
+              $field['options'] = [
+                '0' => E::ts('No'),
+                '1' => E::ts('Yes'),
+              ];
+            }
+            else {
+              // Treat boolean as empty array.
+              // This happens for custom fields with a multiple choice option group that has no (active) option.
+              $field['options'] = [];
+            }
           }
 
           Assert::isArray($field['options']);
