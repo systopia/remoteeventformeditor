@@ -1,3 +1,11 @@
+#: Civi/RemoteEventFormEditor/FieldType/Loader/AbstractCustomFieldTypeLoader.php
+msgid "No"
+msgstr ""
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/AbstractCustomFieldTypeLoader.php
+msgid "Yes"
+msgstr ""
+
 #: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeGroupLoader.php
 msgid "Contact"
 msgstr ""
@@ -84,6 +92,14 @@ msgstr ""
 
 #: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
 msgid "Title"
+msgstr ""
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+msgid "Job Title"
+msgstr ""
+
+#: Civi/RemoteEventFormEditor/FieldType/Loader/ContactFieldTypeLoader.php
+msgid "Preferred Language"
 msgstr ""
 
 #: Civi/RemoteEventFormEditor/FieldType/Loader/GenericFieldTypeGroupLoader.php
