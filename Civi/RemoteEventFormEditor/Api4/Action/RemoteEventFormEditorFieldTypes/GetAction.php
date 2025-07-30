@@ -33,7 +33,7 @@ final class GetAction extends AbstractAction {
   }
 
   public function _run(Result $result): void {
-    $result->exchangeArray(iterator_to_array($this->fieldTypeGroupContainer->getFieldTypeGroups()));
+    $result->exchangeArray([...$this->fieldTypeGroupContainer->getFieldTypeGroups()]);
   }
 
 }

@@ -1,13 +1,21 @@
 #!/bin/bash
 set -eu -o pipefail
 
-XCM_VERSION=1.13.1
+XCM_VERSION=1.14.0
 IDENTITYTRACKER_VERSION=1.4.0
-REMOTETOOLS_VERSION=0.11.0
+REMOTETOOLS_VERSION=0.13.0
 REMOTEEVENT_BRANCH=master
 
 EXT_DIR=$(dirname "$(dirname "$(realpath "$0")")")
 EXT_NAME=$(basename "$EXT_DIR")
+
+if ! type git >/dev/null 2>&1; then
+  apt -y update
+  apt -y install git
+fi
+
+# Prevent this git error: The repository does not have the correct ownership and git refuses to use it
+git config --global --add safe.directory "/var/www/html/sites/default/files/civicrm/ext/$EXT_NAME"
 
 i=0
 while ! mysql -h "$CIVICRM_DB_HOST" -P "$CIVICRM_DB_PORT" -u "$CIVICRM_DB_USER" --password="$CIVICRM_DB_PASS" -e 'SELECT 1;' >/dev/null 2>&1; do

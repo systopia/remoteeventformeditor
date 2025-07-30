@@ -1,12 +1,12 @@
+# Copy this file to phpstan.neon and replace {VENDOR_DIR} with the appropriate
+# path.
+
 includes:
 	- phpstan.neon.dist
 
 parameters:
 	scanDirectories:
 		- {VENDOR_DIR}/civicrm/civicrm-core/CRM/
-		- {EXT_DIR}/de.systopia.remoteevent/Civi/
-		- {EXT_DIR}/de.systopia.remoteevent/CRM/
-		- {EXT_DIR}/de.systopia.remotetools/CRM/
 	scanFiles:
 		- {VENDOR_DIR}/civicrm/civicrm-core/api/api.php
 	bootstrapFiles:

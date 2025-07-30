@@ -50,7 +50,7 @@ abstract class AbstractFieldTypeGroupLoader implements FieldTypeGroupLoaderInter
   private function getTypes(): array {
     $types = [];
     foreach ($this->typeLoaders as $typeLoader) {
-      $types = array_merge($types, iterator_to_array($typeLoader->getFieldTypes()));
+      $types = array_merge($types, [...$typeLoader->getFieldTypes()]);
     }
 
     return $types;
