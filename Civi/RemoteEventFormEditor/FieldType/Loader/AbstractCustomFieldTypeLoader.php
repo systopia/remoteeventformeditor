@@ -216,12 +216,12 @@ abstract class AbstractCustomFieldTypeLoader implements EditorFieldTypeLoaderInt
   /**
    * Similar to array_flip(), but supports any scalar.
    *
-   * @phpstan-param array<scalar, string> $options
+   * @phpstan-param array<int|string, string> $options
    *
-   * @phpstan-return array<string, scalar>
+   * @phpstan-return array<string, int|string>
    */
   private static function swapOptions(array $options): array {
-    /** @phpstan-var array<string, scalar> $swappedOptions */
+    /** @phpstan-var array<string, int|string> $swappedOptions */
     $swappedOptions = array_combine(array_values($options), array_keys($options));
 
     return $swappedOptions;

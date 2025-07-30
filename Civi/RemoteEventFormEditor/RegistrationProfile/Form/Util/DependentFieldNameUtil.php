@@ -37,6 +37,7 @@ final class DependentFieldNameUtil {
       return [];
     }
 
+    // @phpstan-ignore argument.type
     return self::toProfileFormFieldNames($editorField['dependencies']);
   }
 

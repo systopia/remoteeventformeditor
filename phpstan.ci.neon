@@ -4,9 +4,6 @@ includes:
 parameters:
 	scanDirectories:
 		- ci/vendor/civicrm/civicrm-core/CRM/
-		- de.systopia.remoteevent/Civi/
-		- de.systopia.remoteevent/CRM/
-		- de.systopia.remotetools/CRM/
 	scanFiles:
 		- ci/vendor/civicrm/civicrm-core/api/api.php
 	bootstrapFiles:

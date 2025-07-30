@@ -14,17 +14,9 @@ This extension is licensed under [AGPL-3.0](LICENSE.txt).
 
 ## Requirements
 
-* PHP 7.4 or PHP 8
-* CiviCRM 5.48+
-* [CiviRemote Event](https://github.com/systopia/de.systopia.remoteevent) 1.2+
-* Requirements specified in `composer.json`
-  * webmozart/assert
-  * symfony/polyfill-php80 (if PHP 7.4 is used.)
-
-If the requirements specified in `composer.json` are not available, use
-`composer` to install them. If CviCRM is set up via composer, you may want to
-use `composer require` in your Composer project. Alternatively you can just run
-`composer install` in the extension's directory.
+* PHP 8.1+
+* CiviCRM 5.54+
+* [CiviRemote Event](https://github.com/systopia/de.systopia.remoteevent) 1.3+
 
 ## Installation (CLI, Zip)
 
@@ -49,8 +41,8 @@ cv en remoteeventformeditor
 
 ## Credits
 
-The initial development was partly funded by Evangelische Kirche im Rheinland (
-Protestant Church Rhineland). Thank you!
+The initial development was partly funded by Evangelische Kirche im Rheinland
+(Protestant Church Rhineland). Thank you!
 
 ## We need your support
 

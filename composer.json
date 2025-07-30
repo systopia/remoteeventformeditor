@@ -1,5 +1,6 @@
 {
     "name": "systopia/remoteeventformeditor",
+    "description": "Form editor for event registration with CiviRemote",
     "type": "civicrm-ext",
     "license": "AGPL-3.0-or-later",
     "authors": [
@@ -13,11 +14,13 @@
     "prefer-stable": true,
     "config": {
         "prepend-autoloader": false,
-        "sort-packages": true
+        "sort-packages": true,
+        "platform": {
+        }
     },
     "require": {
-        "webmozart/assert": "^1",
-        "symfony/polyfill-php80": ">=1"
+        "php": "^8.1",
+        "webmozart/assert": "^1"
     },
     "scripts": {
         "composer-phpcs": [
@@ -41,7 +44,7 @@
             "@php tools/phpcs/vendor/bin/phpcbf"
         ],
         "phpstan": [
-            "@php tools/phpstan/vendor/bin/phpstan"
+            "@php tools/phpstan/vendor/bin/phpstan -v"
         ],
         "phpunit": [
             "@php tools/phpunit/vendor/bin/simple-phpunit --coverage-text"
