@@ -1,3 +1,31 @@
+#: CRM/RemoteEventFormEditor/DAO/RemoteEventFormEditorForm.php
+msgid "Remote Event Form Editor Forms"
+msgstr ""
+
+#: CRM/RemoteEventFormEditor/DAO/RemoteEventFormEditorForm.php
+msgid "Remote Event Form Editor Form"
+msgstr ""
+
+#: CRM/RemoteEventFormEditor/DAO/RemoteEventFormEditorForm.php
+msgid "Unique RemoteEventFormEditorForm ID"
+msgstr ""
+
+#: CRM/RemoteEventFormEditor/DAO/RemoteEventFormEditorForm.php ang/crmRemoteEventFormEditor/edit.html ang/crmRemoteEventFormEditor/list.html
+msgid "Name"
+msgstr ""
+
+#: CRM/RemoteEventFormEditor/DAO/RemoteEventFormEditorForm.php
+msgid "Name of the form"
+msgstr ""
+
+#: CRM/RemoteEventFormEditor/DAO/RemoteEventFormEditorForm.php
+msgid "Fields"
+msgstr ""
+
+#: CRM/RemoteEventFormEditor/DAO/RemoteEventFormEditorForm.php
+msgid "Fields in the form"
+msgstr ""
+
 #: Civi/RemoteEventFormEditor/FieldType/Loader/AbstractCustomFieldTypeLoader.php
 msgid "No"
 msgstr ""
@@ -134,16 +162,12 @@ msgstr ""
 msgid "Participant"
 msgstr ""
 
-#: ang/crmRemoteEventFormEditor/edit.controller.js ang/crmRemoteEventFormEditor/editor/editor.directive.js ang/crmRemoteEventFormEditor/editor-canvas/editor-canvas.directive.js ang/crmRemoteEventFormEditor/field/field.directive.js ang/crmRemoteEventFormEditor/input/json.directive.js ang/crmRemoteEventFormEditor/list.controller.js ang/crmRemoteEventFormEditor/option-group/select-allowed-options.directive.js ang/crmRemoteEventFormEditor/option-group/select-initial-option.directive.js
+#: ang/crmRemoteEventFormEditor/edit.controller.js ang/crmRemoteEventFormEditor/editor-canvas/editor-canvas.directive.js ang/crmRemoteEventFormEditor/editor/editor.directive.js ang/crmRemoteEventFormEditor/field/field.directive.js ang/crmRemoteEventFormEditor/input/json.directive.js ang/crmRemoteEventFormEditor/list.controller.js ang/crmRemoteEventFormEditor/option-group/select-allowed-options.directive.js ang/crmRemoteEventFormEditor/option-group/select-initial-option.directive.js
 msgid "remoteeventformeditor"
 msgstr ""
 
 #: ang/crmRemoteEventFormEditor/edit.html ang/crmRemoteEventFormEditor/list.html managed/NavigationRemoteEventFormEditor.mgd.php
 msgid "Event Form Editor (CiviRemote)"
-msgstr ""
-
-#: ang/crmRemoteEventFormEditor/edit.html ang/crmRemoteEventFormEditor/list.html
-msgid "Name"
 msgstr ""
 
 #: ang/crmRemoteEventFormEditor/edit.html
@@ -158,28 +182,16 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
+#: ang/crmRemoteEventFormEditor/editor-canvas/editor-canvas.template.html
+msgid "Current fields (debug output)"
+msgstr ""
+
 #: ang/crmRemoteEventFormEditor/editor/editor.template.html
 msgid "Field types"
 msgstr ""
 
 #: ang/crmRemoteEventFormEditor/editor/editor.template.html
 msgid "Form Layout"
-msgstr ""
-
-#: ang/crmRemoteEventFormEditor/editor-canvas/editor-canvas.template.html
-msgid "Current fields (debug output)"
-msgstr ""
-
-#: ang/crmRemoteEventFormEditor/field/field.template.html ang/crmRemoteEventFormEditor/field-types/address.template.html
-msgid "Label"
-msgstr ""
-
-#: ang/crmRemoteEventFormEditor/field/field.template.html
-msgid "Description"
-msgstr ""
-
-#: ang/crmRemoteEventFormEditor/field/field.template.html ang/crmRemoteEventFormEditor/field-types/address.template.html
-msgid "Required"
 msgstr ""
 
 #: ang/crmRemoteEventFormEditor/field-types/address.template.html
@@ -192,6 +204,14 @@ msgstr ""
 
 #: ang/crmRemoteEventFormEditor/field-types/address.template.html
 msgid "Optional"
+msgstr ""
+
+#: ang/crmRemoteEventFormEditor/field-types/address.template.html ang/crmRemoteEventFormEditor/field/field.template.html
+msgid "Required"
+msgstr ""
+
+#: ang/crmRemoteEventFormEditor/field-types/address.template.html ang/crmRemoteEventFormEditor/field/field.template.html
+msgid "Label"
 msgstr ""
 
 #: ang/crmRemoteEventFormEditor/field-types/checkbox.template.html ang/crmRemoteEventFormEditor/field-types/date.template.html ang/crmRemoteEventFormEditor/field-types/datetime.template.html ang/crmRemoteEventFormEditor/field-types/file.template.html ang/crmRemoteEventFormEditor/field-types/location-type.template.html ang/crmRemoteEventFormEditor/field-types/multi-select.template.html ang/crmRemoteEventFormEditor/field-types/number.template.html ang/crmRemoteEventFormEditor/field-types/select.template.html ang/crmRemoteEventFormEditor/field-types/text.template.html
@@ -272,6 +292,10 @@ msgstr ""
 
 #: ang/crmRemoteEventFormEditor/field-types/text.template.html
 msgid "Comma Separated Integers"
+msgstr ""
+
+#: ang/crmRemoteEventFormEditor/field/field.template.html
+msgid "Description"
 msgstr ""
 
 #: ang/crmRemoteEventFormEditor/input/json.directive.js
