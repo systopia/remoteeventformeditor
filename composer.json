@@ -54,5 +54,10 @@
             "@phpstan",
             "@phpunit"
         ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.1.x-dev"
+        }
     }
 }
