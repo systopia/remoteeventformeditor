@@ -9,7 +9,37 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#: CRM/RemoteEventFormEditor/DAO/RemoteEventFormEditorForm.php
+msgid "Remote Event Form Editor Forms"
+msgstr "Veranstaltungsformulareditor-Formulare"
+
+#: CRM/RemoteEventFormEditor/DAO/RemoteEventFormEditorForm.php
+msgid "Remote Event Form Editor Form"
+msgstr "Veranstaltungsformulareditor-Formular"
+
+#: CRM/RemoteEventFormEditor/DAO/RemoteEventFormEditorForm.php
+msgid "Unique RemoteEventFormEditorForm ID"
+msgstr "Eindeutige RemoteEventFormEditorForm ID"
+
+#: CRM/RemoteEventFormEditor/DAO/RemoteEventFormEditorForm.php
+#: ang/crmRemoteEventFormEditor/edit.html
+#: ang/crmRemoteEventFormEditor/list.html
+msgid "Name"
+msgstr "Name"
+
+#: CRM/RemoteEventFormEditor/DAO/RemoteEventFormEditorForm.php
+msgid "Name of the form"
+msgstr "Name des Formulars"
+
+#: CRM/RemoteEventFormEditor/DAO/RemoteEventFormEditorForm.php
+msgid "Fields"
+msgstr "Felder"
+
+#: CRM/RemoteEventFormEditor/DAO/RemoteEventFormEditorForm.php
+msgid "Fields in the form"
+msgstr "Felder im Formular"
 
 #: Civi/RemoteEventFormEditor/FieldType/Loader/AbstractCustomFieldTypeLoader.php
 msgid "No"
@@ -156,26 +186,21 @@ msgid "Participant"
 msgstr "Teilnehmer"
 
 #: ang/crmRemoteEventFormEditor/edit.controller.js
-#: ang/crmRemoteEventFormEditor/editor/editor.directive.js
 #: ang/crmRemoteEventFormEditor/editor-canvas/editor-canvas.directive.js
+#: ang/crmRemoteEventFormEditor/editor/editor.directive.js
 #: ang/crmRemoteEventFormEditor/field/field.directive.js
 #: ang/crmRemoteEventFormEditor/input/json.directive.js
 #: ang/crmRemoteEventFormEditor/list.controller.js
 #: ang/crmRemoteEventFormEditor/option-group/select-allowed-options.directive.js
 #: ang/crmRemoteEventFormEditor/option-group/select-initial-option.directive.js
 msgid "remoteeventformeditor"
-msgstr ""
+msgstr "remoteeventformeditor"
 
 #: ang/crmRemoteEventFormEditor/edit.html
 #: ang/crmRemoteEventFormEditor/list.html
 #: managed/NavigationRemoteEventFormEditor.mgd.php
 msgid "Event Form Editor (CiviRemote)"
 msgstr "Veranstaltungsformulareditor (CiviRemote)"
-
-#: ang/crmRemoteEventFormEditor/edit.html
-#: ang/crmRemoteEventFormEditor/list.html
-msgid "Name"
-msgstr "Name"
 
 #: ang/crmRemoteEventFormEditor/edit.html
 msgid ""
@@ -193,6 +218,10 @@ msgstr "Speichern"
 msgid "Cancel"
 msgstr "Abbrechen"
 
+#: ang/crmRemoteEventFormEditor/editor-canvas/editor-canvas.template.html
+msgid "Current fields (debug output)"
+msgstr "Aktuelle Felder (Debugausgabe)"
+
 #: ang/crmRemoteEventFormEditor/editor/editor.template.html
 msgid "Field types"
 msgstr "Feldtypen"
@@ -200,24 +229,6 @@ msgstr "Feldtypen"
 #: ang/crmRemoteEventFormEditor/editor/editor.template.html
 msgid "Form Layout"
 msgstr "Formularlayout"
-
-#: ang/crmRemoteEventFormEditor/editor-canvas/editor-canvas.template.html
-msgid "Current fields (debug output)"
-msgstr "Aktuelle Felder (Debugausgabe)"
-
-#: ang/crmRemoteEventFormEditor/field/field.template.html
-#: ang/crmRemoteEventFormEditor/field-types/address.template.html
-msgid "Label"
-msgstr "Beschriftung"
-
-#: ang/crmRemoteEventFormEditor/field/field.template.html
-msgid "Description"
-msgstr "Beschreibung"
-
-#: ang/crmRemoteEventFormEditor/field/field.template.html
-#: ang/crmRemoteEventFormEditor/field-types/address.template.html
-msgid "Required"
-msgstr "Erforderlich"
 
 #: ang/crmRemoteEventFormEditor/field-types/address.template.html
 msgid "Street"
@@ -231,6 +242,16 @@ msgstr "Kein"
 #: ang/crmRemoteEventFormEditor/field-types/address.template.html
 msgid "Optional"
 msgstr "Optional"
+
+#: ang/crmRemoteEventFormEditor/field-types/address.template.html
+#: ang/crmRemoteEventFormEditor/field/field.template.html
+msgid "Required"
+msgstr "Erforderlich"
+
+#: ang/crmRemoteEventFormEditor/field-types/address.template.html
+#: ang/crmRemoteEventFormEditor/field/field.template.html
+msgid "Label"
+msgstr "Beschriftung"
 
 #: ang/crmRemoteEventFormEditor/field-types/checkbox.template.html
 #: ang/crmRemoteEventFormEditor/field-types/date.template.html
@@ -336,6 +357,10 @@ msgstr "Alphanumerisch"
 #: ang/crmRemoteEventFormEditor/field-types/text.template.html
 msgid "Comma Separated Integers"
 msgstr "Komma-getrennte Ganzzahlen"
+
+#: ang/crmRemoteEventFormEditor/field/field.template.html
+msgid "Description"
+msgstr "Beschreibung"
 
 #: ang/crmRemoteEventFormEditor/input/json.directive.js
 msgid "Invalid JSON"
