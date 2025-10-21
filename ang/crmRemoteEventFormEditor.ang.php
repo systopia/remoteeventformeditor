@@ -21,6 +21,5 @@ return [
     'ui.sortable',
     'tg.dynamicDirective',
   ],
-  'settings' => [],
   'bundles' => ['bootstrap3'],
 ];
