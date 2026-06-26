@@ -24,14 +24,14 @@ final class ArrayUtil {
   /**
    * Actually does the same as array_flip(), but supports any scalar and null.
    *
-   * @phpstan-param array<scalar|null, scalar|null> $array
+   * @param array<int|string, scalar|null> $array
    *
-   * @phpstan-return array<scalar|null, scalar|null>
+   * @return array<int|string, int|string>
    */
   public static function flip(array $array): array {
     $flipped = [];
     foreach ($array as $label => $value) {
-      $flipped[$value] = $label;
+      $flipped[(string) $value] = $label;
     }
 
     return $flipped;
