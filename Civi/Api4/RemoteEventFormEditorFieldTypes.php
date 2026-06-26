@@ -30,9 +30,8 @@ final class RemoteEventFormEditorFieldTypes extends AbstractEntity {
   }
 
   public static function get(bool $checkPermissions = TRUE): GetAction {
-    // @phpstan-ignore-next-line
-    return \Civi::service(GetAction::class)
-      ->setCheckPermissions($checkPermissions);
+    // @phpstan-ignore method.nonObject
+    return \Civi::service(GetAction::class)->setCheckPermissions($checkPermissions);
   }
 
   /**

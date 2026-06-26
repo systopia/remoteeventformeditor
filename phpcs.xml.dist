@@ -8,7 +8,7 @@
     <file>tests</file>
     <file>remoteeventformeditor.php</file>
 
-    <exclude-pattern>/CRM/RemoteEventFormEditor/DAO/.*\.php$</exclude-pattern>
+    <exclude-pattern>/CRM/Remoteeventformeditor/DAO/.*\.php$</exclude-pattern>
 
     <arg name="extensions" value="php"/>
     <arg name="cache" value=".phpcs.cache"/>
@@ -22,6 +22,7 @@
         <!-- Conflicts with PHPStan type hints -->
         <exclude name="Drupal.Commenting.VariableComment.IncorrectVarType"/>
         <exclude name="Drupal.Commenting.FunctionComment.ParamTypeSpaces"/>
+        <exclude name="Drupal.Commenting.FunctionComment.ReturnTypeSpaces"/>
 
         <!-- Don't enforce phpdoc type hint because it (might) only duplicate a PHP type hint -->
         <exclude name="Drupal.Commenting.VariableComment.MissingVar"/>
